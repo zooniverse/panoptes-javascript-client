@@ -1,0 +1,19 @@
+{
+  "name": "panoptes-client",
+  "version": "0.0.1",
+  "description": "A Javascript client to access the Panoptes API",
+  "main": "index.js",
+  "author": "Zooniverse",
+  "license": "MIT",
+  "dependencies": {
+    "json-api-client": "~0.2.5",
+    "promise": "~7.0.0"
+  },
+  "devDependencies": {
+    "browserify": "~9.0.8",
+    "watchify": "~3.1.1"
+  },
+  "scripts": {
+    "watch": "watchify index.js -o ./dist/index.js -v"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "panoptes-client",
+  "main": "./dist/index.js",
+  "version": "0.0.1",
+  "authors": [
+    "Zooniverse"
+  ],
+  "description": "A Javascript client to access the Panoptes API",
+  "license": "MIT",
+  "homepage": "https://github.com/zooniverse",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test"
+  ]
+}
