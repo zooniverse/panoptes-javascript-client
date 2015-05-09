@@ -1,19 +1,29 @@
 {
   "name": "panoptes-client",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Javascript client to access the Panoptes API",
   "main": "index.js",
   "author": "Zooniverse",
   "license": "MIT",
+  "engine": {
+    "node": "0.12.x"
+  },
   "dependencies": {
     "json-api-client": "~0.2.5",
     "promise": "~7.0.0"
   },
   "devDependencies": {
     "browserify": "~9.0.8",
-    "watchify": "~3.1.1"
+    "watchify": "~3.1.1",
+    "babelify": "~6.0.2",
+    "tap-spec": "~2.1.1",
+    "testling": "~1.7.1",
+    "function-bind": "~1.0.2",
+    "blue-tape": "~0.1.8"
   },
   "scripts": {
-    "watch": "watchify index.js -o ./dist/index.js -v"
+    "watch": "watchify index.js -t babelify -o ./dist/index.js -v",
+    "test": "browserify ./test/runner.js -t babelify | testling \"${TESTLING_ARGS:---pass}\" | tap-spec",
+    "test-mac": "TESTLING_ARGS=\"-x open --new -a Google\\ Chrome --args --incognito\" npm run test"
   }
 }
