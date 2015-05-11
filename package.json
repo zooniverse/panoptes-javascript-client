@@ -22,7 +22,7 @@
     "blue-tape": "~0.1.8"
   },
   "scripts": {
-    "watch": "watchify index.js -t babelify -o ./dist/index.js -v",
+    "watch": "watchify index.js -t babelify -o ./dist/panoptes-client.js -v",
     "test": "browserify ./test/runner.js -t babelify | testling \"${TESTLING_ARGS:---pass}\" | tap-spec",
     "test-mac": "TESTLING_ARGS=\"-x open --new -a Google\\ Chrome --args --incognito\" npm run test"
   }
