@@ -1,6 +1,7 @@
-let { exists } = require('./utils');
-let auth = require('./auth');
-let JSONAPIClient = require('json-api-client');
+import JSONAPIClient from 'json-api-client';
+
+import { exists } from './utils';
+import auth from './auth';
 
 const DEFAULT_OPTS = {
   headers: {
@@ -59,7 +60,7 @@ let handleError = function(request) {
   }
 }
 
-class PanoptesClient {
+export default class PanoptesClient {
   constructor(opts) {
     if (typeof opts === 'undefined') {
       opts = DEFAULT_OPTS;
@@ -82,9 +83,3 @@ class PanoptesClient {
     this.api.auth = auth(this);
   }
 }
-
-if (typeof window !== 'undefined') {
-  window.PanoptesClient = PanoptesClient;
-}
-
-module.exports = PanoptesClient;

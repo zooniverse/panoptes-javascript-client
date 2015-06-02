@@ -1,10 +1,10 @@
-let { exists, console } = require('./utils');
-    
-let JSONAPIClient = require('json-api-client'),
-    Model = JSONAPIClient.Model,
-    makeHTTPRequest = JSONAPIClient.makeHTTPRequest;
+import JSONAPIClient from 'json-api-client';
 
-module.exports = function(panoptesClient) {
+import { exists } from './utils';
+
+let { Model, makeHTTPRequest } = JSONAPIClient;
+
+export default function(panoptesClient) {
   // Use this to override the default API-specific headers.
   const JSON_HEADERS = {
     'Content-Type': 'application/json',

@@ -13,17 +13,18 @@
     "promise": "~7.0.0"
   },
   "devDependencies": {
-    "browserify": "~9.0.8",
-    "watchify": "~3.1.1",
+    "babel": "~5.4.2",
     "babelify": "~6.0.2",
+    "blue-tape": "~0.1.8",
+    "browserify": "~9.0.8",
+    "function-bind": "~1.0.2",
     "tap-spec": "~2.1.1",
     "testling": "~1.7.1",
-    "function-bind": "~1.0.2",
-    "blue-tape": "~0.1.8",
-    "babel": "^5.4.2"
+    "watchify": "~3.1.1"
   },
   "scripts": {
-    "watch": "watchify index.js -t babelify -o ./dist/panoptes-client.js -v",
+    "build": "browserify ./src/client.js -t babelify -o ./dist/panoptes-client.js",
+    "watch": "babel ./src --out-dir ./lib",
     "test": "browserify ./test/runner.js -t babelify | testling \"${TESTLING_ARGS:---pass}\" | tap-spec",
     "test-mac": "TESTLING_ARGS=\"-x open --new -a Google\\ Chrome --args --incognito\" npm run test"
   }
