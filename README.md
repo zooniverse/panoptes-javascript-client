@@ -16,7 +16,7 @@ bower install panoptes-client
 
 ### Using
 
-The Panoptes API is built on the very generically named [JSON API Spec](http://jsonapi.org/). This client leans heavily on [this library](github.com/brian-c/json-api-client) to make it easy to access different resources that the API offers.
+The Panoptes API is built on the very generically named [JSON API Spec](http://jsonapi.org/). This client leans heavily on [this library](https://github.com/brian-c/json-api-client) to make it easy to access different resources that the API offers.
 
 ### License
 
