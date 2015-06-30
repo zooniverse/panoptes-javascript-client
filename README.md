@@ -18,6 +18,15 @@ bower install panoptes-client
 
 The Panoptes API is built on the very generically named [JSON API Spec](http://jsonapi.org/). This client leans heavily on [this library](https://github.com/brian-c/json-api-client) to make it easy to access different resources that the API offers.
 
+#### Using in Node
+
+The client requires polyfills for Promises and XMLHttpRequest - without them, it'll exit silently. Installing `es6-promise` and `xmlhttprequest` to your project, and adding the following lines should get it working:
+
+```
+require('es6-promise').polyfill();
+global.XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+```
+
 ### Conventions
 
 This project adheres to [Semantic Versioning](http://semver.org/), and follows the changelog format set out at [Keep a CHANGELOG](http://keepachangelog.com/).
