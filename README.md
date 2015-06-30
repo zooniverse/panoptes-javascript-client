@@ -20,10 +20,9 @@ The Panoptes API is built on the very generically named [JSON API Spec](http://j
 
 #### Using in Node
 
-The client requires polyfills for Promises and XMLHttpRequest - without them, it'll exit silently. Installing `es6-promise` and `xmlhttprequest` to your project, and adding the following lines should get it working:
+The client requires polyfills for Promises and XMLHttpRequest - without them, it'll exit silently. Node 0.12 includes native promise support, so installing `xmlhttprequest` and adding the following line should get it working:
 
 ```
-require('es6-promise').polyfill();
 global.XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 ```
 
