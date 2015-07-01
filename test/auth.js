@@ -2,8 +2,8 @@ let test = require('blue-tape'),
     { exists } = require('../lib/utils'),
     PanoptesClient = require('../lib/client');
 
-const TEST_NAME = 'TEST_' + (new Date).toISOString().replace(/\W/g, '_')
-const TEST_EMAIL = TEST_NAME.toLowerCase() + '@zooniverse.org'
+const TEST_LOGIN = 'TEST_' + (new Date).toISOString().replace(/\W/g, '_')
+const TEST_EMAIL = TEST_LOGIN.toLowerCase() + '@zooniverse.org'
 const TEST_PASSWORD = 'P@$$wørd'
 
 let { api } = new PanoptesClient({
@@ -31,7 +31,7 @@ test('Registering an account with no data fails', function(t) {
     })
     .catch((error) => {
       t.pass('An error should have been thrown.');
-      t.ok(error.message.match(/^display_name(.+)blank/mi), 'Display name error should mention "blank"');
+      t.ok(error.message.match(/^login(.+)blank/mi), 'Login error should mention "blank"');
       t.ok(error.message.match(/^email(.+)blank/mi), 'Email error should mention "blank"');
       t.ok(error.message.match(/^password(.+)blank/mi), 'Password error should mention "blank"');
     });
@@ -40,7 +40,7 @@ test('Registering an account with no data fails', function(t) {
 
 test('Registering an account with a short password fails', function(t) {
   const SHORT_PASSWORD_REGISTRATION = {
-    display_name: TEST_NAME + '_short_password',
+    login: TEST_LOGIN + '_short_password',
     email: TEST_EMAIL,
     password: TEST_PASSWORD.slice(0, 7)
   }
@@ -56,7 +56,7 @@ test('Registering an account with a short password fails', function(t) {
 
 test('Registering a new account works', function(t) {
   const GOOD_REGISTRATION = {
-    display_name: TEST_NAME,
+    login: TEST_LOGIN,
     email: TEST_EMAIL,
     password: TEST_PASSWORD
   }
@@ -64,7 +64,7 @@ test('Registering a new account works', function(t) {
   return auth.register(GOOD_REGISTRATION)
     .then(function(user) {
       t.ok(exists(user), 'Should have gotten the new user');
-      t.ok(user.display_name == TEST_NAME, 'Display_name should be whatever display_name was given');
+      t.ok(user.login == TEST_LOGIN, 'Login should be whatever login was given');
     });
 });
 
@@ -73,7 +73,7 @@ test('Registering keeps you signed in', function(t) {
   return auth.checkCurrent()
     .then(function(user) {
       t.ok(exists(user), 'Should have gotten a user');
-      t.ok(user.display_name == TEST_NAME, 'Display_name should be whatever display_name was given');
+      t.ok(user.login == TEST_LOGIN, 'Login should be whatever login was given');
     });
 });
 
@@ -84,26 +84,26 @@ test('Sign out', function(t) {
     });
 });
 
-test('Registering an account with an already used display_name fails', function(t) {
+test('Registering an account with an already used login fails', function(t) {
   const DUPLICATE_REGISTRATION = {
-    display_name: TEST_NAME,
+    login: TEST_LOGIN,
     email: TEST_EMAIL,
     password: TEST_PASSWORD
   }
 
   return auth.register(DUPLICATE_REGISTRATION)
     .then(function() {
-      t.fail('Should not have been able to register with a duplicate display_name');
+      t.fail('Should not have been able to register with a duplicate login');
     })
     .catch(function(error) {
-      t.ok(error.message.match(/^display_name(.+)taken/mi), 'Display name error should mention "taken"');
+      t.ok(error.message.match(/^login(.+)taken/mi), 'Login error should mention "taken"');
       t.ok(error.message.match(/^email(.+)taken/mi), 'Email error should mention "taken"');
     });
 });
 
 test('Signing in with an unknown login fails', function(t) {
   const BAD_LOGIN = {
-    display_name: 'NOT_' + TEST_NAME,
+    login: 'NOT_' + TEST_LOGIN,
     password: TEST_PASSWORD
   }
 
@@ -120,7 +120,7 @@ test('Signing in with an unknown login fails', function(t) {
 
 test('Signing in with the wrong password fails', function(t) {
   const BAD_PASSWORD = {
-    display_name: TEST_NAME,
+    login: TEST_LOGIN,
     password: 'NOT_' + TEST_PASSWORD
   }
 
@@ -135,14 +135,14 @@ test('Signing in with the wrong password fails', function(t) {
 
 test('Signing in with good details works', function(t) {
   const GOOD_LOGIN_DETAILS = {
-    display_name: TEST_NAME,
+    login: TEST_LOGIN,
     password: TEST_PASSWORD
   }
 
   return auth.signIn(GOOD_LOGIN_DETAILS)
     .then(function(user) {
       t.ok(exists(user), 'Should have gotten a user');
-      t.ok(user.display_name == TEST_NAME, 'Display name should be the original');
+      t.ok(user.login == TEST_LOGIN, 'Login should be the original');
     })
 });
 
@@ -150,7 +150,7 @@ test('Disabling an account works', function(t) {
   return auth.disableAccount()
     .then(function() {
       const OLD_LOGIN_DETAILS = {
-        display_name: TEST_NAME,
+        login: TEST_LOGIN,
         password: TEST_PASSWORD
       }
 
