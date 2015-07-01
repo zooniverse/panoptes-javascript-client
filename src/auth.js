@@ -123,7 +123,7 @@ export default function(panoptesClient) {
       return api.get('/me')
         .then(function(response) {
           let user = response[0];
-          console.info('Got session', user.display_name, user.id);
+          console.info('Got session', user.login, user.id);
           return response[0];
         })
         .catch(function(error) {
@@ -137,24 +137,12 @@ export default function(panoptesClient) {
         opts = {};
       }
 
-      let display_name = opts.display_name,
-          email = opts.email,
-          password = opts.password,
-          global_email_communication = opts.global_email_communication;
-
       return this.checkCurrent().then(user => {
         if (exists(user)) {
           return this.signOut().then(() => {
-            return this.register({
-              display_name: display_name,
-              email: email,
-              password: password,
-              global_email_communication: global_email_communication
-            });
+            return this.register(opts);
           });
         } else {
-          console.log('Registering new account', display_name);
-
           let registrationRequest = this._getAuthToken().then((token) => {
             let data = {
               authenticity_token: token,
@@ -166,13 +154,11 @@ export default function(panoptesClient) {
               .then(() => {
                 return this._getBearerToken().then(() => {
                   return this._getSession().then(function(user) {
-                    console.info('Registered account', user.display_name, user.id);
                     return user;
                   });
                 });
               })
               .catch(function(error) {
-                console.error('Failed to register');
                 throw(error);
               });
           });
@@ -211,17 +197,12 @@ export default function(panoptesClient) {
         opts = {};
       }
 
-      let display_name = opts.display_name,
-          password = opts.password;
-
       return this.checkCurrent().then((user) => {
         if (exists(user)) {
           return this.signOut().then(() => {
             return this.signIn(opts);
           });
         } else {
-          console.log('Signing in', display_name);
-
           let signInRequest = this._getAuthToken().then((token) => {
             let data = {
               authenticity_token: token,
@@ -232,7 +213,7 @@ export default function(panoptesClient) {
               .then(() => {
                 return this._getBearerToken().then(() => {
                   return this._getSession().then((user) => {
-                    console.info('Signed in', user.display_name, user.id);
+                    console.info('Signed in', user.login, user.id);
                     return user;
                   });
                 });
