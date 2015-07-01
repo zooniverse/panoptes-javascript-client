@@ -20,11 +20,13 @@ The Panoptes API is built on the very generically named [JSON API Spec](http://j
 
 #### Using in Node
 
-The client requires polyfills for Promises and XMLHttpRequest - without them, it'll exit silently. Node 0.12 includes native promise support, so installing `xmlhttprequest` and adding the following line should get it working:
+The client requires polyfills for Promises and XMLHttpRequest - without them, it'll exit silently. Node 0.12 includes native promise support, so installing `xmlhttprequest-cookie` and adding the following line should get it working:
 
 ```
-global.XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+global.XMLHttpRequest = require('xmlhttprequest-cookie').XMLHttpRequest;
 ```
+
+Cookie support is required for any authenticated request.
 
 ### Conventions
 
