@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - This change log (woo, meta)
 
+### Changed
+- Auth API now uses `login` instead of `display_name`
+
 ## [0.1.1] - 2015-05-14
 ### Changed
 - Compile es6 code outside of `dist`
