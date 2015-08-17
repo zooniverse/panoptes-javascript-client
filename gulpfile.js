@@ -7,8 +7,8 @@ var source = require('vinyl-source-stream');
 var watchify = require("watchify");
 
 var config = {
-  entryFile: './src/index.js',
-  outputDir: './out/',
+  entryFile: './src/client.js',
+  outputDir: './build/',
   outputFile: 'bundle.js',
   testFiles: 'test/**/*.js',
   srcFiles: 'src/**/*.js'
@@ -30,7 +30,7 @@ function bundle() {
     .bundle()
     .on('error', function(err) { console.log('Error: ' + err.message); })
     .pipe(source(config.outputFile))
-    .pipe(gulp.dest(config.outputDir));
+    .pipe(gulp.dest(config.outputDir))
 }
 
 gulp.task('build', function(){

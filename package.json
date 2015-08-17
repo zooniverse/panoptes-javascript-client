@@ -41,6 +41,7 @@
     ]
   },
   "scripts": {
+    "build": "gulp compile",
     "test": "gulp test"
   }
 }
