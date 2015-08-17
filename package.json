@@ -15,7 +15,8 @@
   "dependencies": {
     "babel": "~5.8.21",
     "fbemitter": "~2.0.0",
-    "json-api-client": "~0.4.4"
+    "json-api-client": "~0.4.4",
+    "xmlhttprequest-cookie": "git://github.com/chrissnyder/node-xmlhttprequest-cookie.git#5811342"
   },
   "devDependencies": {
     "browserify": "^11.0.1",
@@ -29,7 +30,6 @@
     "mocha": "^2.2.5",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.3.1",
-    "xmlhttprequest-cookie": "git://github.com/chrissnyder/node-xmlhttprequest-cookie.git#5811342",
     "zuul": "^3.2.0"
   },
   "peerDependencies": {
