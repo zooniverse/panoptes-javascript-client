@@ -1,8 +1,3 @@
-import {XMLHttpRequest} from 'xmlhttprequest-cookie'
-if (typeof window === 'undefined') {
-  global.XMLHttpRequest = XMLHttpRequest
-}
-
 import JSONAPIClient from 'json-api-client'
 import Auth from './auth'
 

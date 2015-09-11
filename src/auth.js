@@ -18,8 +18,8 @@ export default class Auth extends EventEmitter {
 
   _getAuthToken() {
     return makeHTTPRequest('GET', this.client.host + '/users/sign_in/?now=' + Date.now(), null, JSON_HEADERS)
-      .then((request) => {
-        return request.getResponseHeader('X-CSRF-Token');
+      .then((response) => {
+        return response.headers['x-csrf-token']
       }).catch((e) => {
         throw new Error(e)
       })
@@ -49,15 +49,14 @@ export default class Auth extends EventEmitter {
       })
   }
 
-  _handleNewBearerToken(request) {
-    let response = JSON.parse(request.responseText)
-    this.client.authenticate(response.access_token)
+  _handleNewBearerToken(response) {
+    this.client.authenticate(response.body.access_token)
 
-    let refresh = this._refreshBearerToken.bind(this, response.refresh_token);
-    let timeToRefresh = (response.expires_in * 1000) - TOKEN_EXPIRATION_ALLOWANCE;
+    let refresh = this._refreshBearerToken.bind(this, response.body.refresh_token);
+    let timeToRefresh = (response.body.expires_in * 1000) - TOKEN_EXPIRATION_ALLOWANCE;
     this._bearerRefreshTimeout = setTimeout(refresh, timeToRefresh);
 
-    return response.access_token
+    return response.body.access_token
   }
 
   _refreshBearerToken(refreshToken) {
@@ -68,8 +67,8 @@ export default class Auth extends EventEmitter {
     };
 
     return makeHTTPRequest('POST', this.client.host + '/oauth/token', data, JSON_HEADERS)
-      .then((request) => {
-        return this._handleNewBearerToken(request);
+      .then((response) => {
+        return this._handleNewBearerToken(response);
       }).catch((e) => {
         throw new Error(e)
       })
@@ -153,9 +152,7 @@ export default class Auth extends EventEmitter {
       }
 
       return this.client.post('/../users', data, JSON_HEADERS)
-        .then(() => {
-          return this._getBearerToken()
-        })
+        .then(() => this._getBearerToken())
         .then(() => this._getSession())
         .then((user) => this._handleUserChange(user))
         .catch((e) => {
