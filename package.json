@@ -30,6 +30,6 @@
   "scripts": {
     "build": "gulp compile",
     "test": "gulp test",
-    "publish": "babel src -d lib"
+    "prepublish": "babel src -d lib"
   }
 }
