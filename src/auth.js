@@ -102,9 +102,7 @@ export default class Auth extends EventEmitter {
     return this._getBearerToken()
       .then(() => this._getSession())
       .then((user) => this._handleUserChange(user))
-      .catch(function(e) {
-        throw new Error('Error retrieving current user.')
-      })
+      .catch((e) => this._handleUserChange(false))
   }
 
   signIn(opts = {}) {
