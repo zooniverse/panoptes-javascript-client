@@ -98,6 +98,15 @@ export default class Auth extends EventEmitter {
     return this.user
   }
 
+  checkCurrent() {
+    return this._getBearerToken()
+      .then(() => this._getSession())
+      .then((user) => this._handleUserChange(user))
+      .catch(function(e) {
+        throw new Error('Error retrieving current user.')
+      })
+  }
+
   signIn(opts = {}) {
     if (this.user) {
       throw new Error('Cannot sign in, already have user')
@@ -110,11 +119,9 @@ export default class Auth extends EventEmitter {
       }
 
       return makeHTTPRequest('POST', this.client.host + '/users/sign_in', data, JSON_HEADERS)
-        .then(() => this._getBearerToken())
-        .then(() => this._getSession())
-        .then((user) => this._handleUserChange(user))
+        .then(() => this.checkCurrent())
         .catch(function(e) {
-          throw new Error(e)
+          throw new Error('Error signing in.')
         })
     })
   }
@@ -152,9 +159,7 @@ export default class Auth extends EventEmitter {
       }
 
       return this.client.post('/../users', data, JSON_HEADERS)
-        .then(() => this._getBearerToken())
-        .then(() => this._getSession())
-        .then((user) => this._handleUserChange(user))
+        .then(() => this.checkCurrent())
         .catch((e) => {
           throw new Error('Error registering user')
         })
