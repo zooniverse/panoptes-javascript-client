@@ -42,9 +42,8 @@ export default class Auth extends EventEmitter {
     }
 
     return makeHTTPRequest('POST', this.client.host + '/oauth/token', data, JSON_HEADERS)
-      .then((response) => {
-        return this._handleNewBearerToken(response)
-      }).catch((e) => {
+      .then((response) => this._handleNewBearerToken(response))
+      .catch((e) => {
         throw new Error(e)
       })
   }
@@ -83,11 +82,11 @@ export default class Auth extends EventEmitter {
     return this.client.get('/me')
       .then((response) => response[0])
       .catch((e) => {
-        throw new Error(e)
+        return false
       })
   }
 
-  _handleUserChange(user) {
+  _handleUserChange(user = false) {
     this.user = user
     this.emit('change', this.user)
 
@@ -102,7 +101,6 @@ export default class Auth extends EventEmitter {
     return this._getBearerToken()
       .then(() => this._getSession())
       .then((user) => this._handleUserChange(user))
-      .catch((e) => this._handleUserChange(false))
   }
 
   signIn(opts = {}) {
