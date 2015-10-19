@@ -81,5 +81,10 @@ export default class PanoptesClient {
     this.api = new JSONAPIClient(this.host + this.root, this.headers);
     this.api.handleError = handleError;
     this.api.auth = auth(this);
+
+    if (exists(window)) {
+      window.zooAPI = this;
+    }
+
   }
 }
