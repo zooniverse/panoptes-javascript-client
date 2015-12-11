@@ -1,7 +1,5 @@
-import JSONAPIClient from 'json-api-client';
-
-import { exists } from './utils';
-import auth from './auth';
+import JSONAPIClient from 'json-api-client'
+import Auth from './auth'
 
 const DEFAULT_OPTS = {
   headers: {
@@ -9,77 +7,33 @@ const DEFAULT_OPTS = {
     'Accept': 'application/vnd.api+json; version=1'
   },
   host: 'https://panoptes.zooniverse.org',
-  root: '/api',
+  apiRoot: '/api',
   appID: null
 }
 
-let handleError = function(request) {
-  let response, errorMessage = null;
-
-  if ('message' in request) {
-    throw request;
-  } else if ('responseText' in request) {
-    try {
-      response = JSON.parse(request.responseText);
-    } catch (error) {}
-
-    if (exists(response) && exists(response.error)) {
-      errorMessage = response.error;
-
-      if (exists(response.error_description)) {
-        errorMessage = errorMessage + ' ' + response.error_description;
-      }
-    } else if (exists(response) && exists(response.errors) && exists(response.errors[0].message)) {
-      errorMessage = []
-
-      response.errors.forEach(function(error) {
-        let message = error.message;
-
-        if (typeof message == 'string') {
-          errorMessage.push(message);
-        } else {
-          let messageParts = [];
-          for (let key in message) {
-            let part = message[key];
-            messageParts.push(key + ' ' + part);
-          }
-          errorMessage.push(messageParts.join("\n"));
-        }
-      });
-
-      errorMessage = errorMessage.join("\n");
-    }
-
-    if (exists(request.responseText) && request.responseText.indexOf('<!DOCTYPE') != -1) {
-      if (errorMessage == null) {
-        errorMessage = request.responseText.trim() || request.status + ' ' + request.statusText;
-      }
-    }
-
-    throw new Error(errorMessage);
-  }
-}
-
-export default class PanoptesClient {
+export default class PanoptesClient extends JSONAPIClient {
   constructor(opts) {
-    if (typeof opts === 'undefined') {
-      opts = DEFAULT_OPTS;
+    if (opts.appID === null) {
+      throw Error('Must provide an app ID')
     }
 
-    for (let key in DEFAULT_OPTS) {
-      if (exists(opts[key])) {
-        this[key] = opts[key];
-      } else {
-        this[key] = DEFAULT_OPTS[key];
-      }
+    opts = Object.assign(DEFAULT_OPTS, opts);
+    super(opts.host + opts.apiRoot, opts.headers)
+
+    for(let key in opts) {
+      this[key] = opts[key]
     }
 
-    if (!exists(this.appID)) {
-      throw Error('Must provide an app ID');
-    }
+    this.auth = new Auth(this)
+  }
 
-    this.api = new JSONAPIClient(this.host + this.root, this.headers);
-    this.api.handleError = handleError;
-    this.api.auth = auth(this);
+  authenticate(token) {
+    this.token = token
+    this.headers['Authorization'] = 'Bearer ' + this.token
+  }
+
+  removeAuthentication() {
+    delete this.token
+    delete this.headers['Authorization']
   }
 }
