@@ -1,8 +1,6 @@
-var JSONAPIClient = require('json-api-client').Resource;
-
+var JSONAPIClient = require('json-api-client');
 var config = require('./config');
-var apiClient = require('./apiClient');
-var authClient = require('./authClient');
+var apiClient = require('./api-client');
 
 var talkClient = new JSONAPIClient(config.talkHost, {
   'Content-Type': 'application/json',
@@ -14,6 +12,6 @@ talkClient.handleError = apiClient.handleError;
 
 module.exports = talkClient;
 
-if (typeof window !== 'undefined' && window !== null) {
+if (typeof window !== 'undefined') {
   window.talkClient = talkClient;
 }

@@ -1,4 +1,5 @@
 {
-	"preset": "airbnb",
-  "disallowQuotedKeysInObjects": false
+  "preset": "airbnb",
+  "disallowQuotedKeysInObjects": false,
+  "requireCamelCaseOrUpperCaseIdentifiers": false
 }

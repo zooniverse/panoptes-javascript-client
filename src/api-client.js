@@ -1,5 +1,4 @@
-var JSONAPIClient = require('json-api-client').Resource;
-
+var JSONAPIClient = require('json-api-client');
 var config = require('./config');
 
 var apiClient = new JSONAPIClient(config.host + '/api', {
@@ -7,15 +6,7 @@ var apiClient = new JSONAPIClient(config.host + '/api', {
   'Accept': 'application/vnd.api+json; version=1',
 });
 
-apiClient.handleError = handleError;
-
-module.exports = apiClient;
-
-if (typeof window !== 'undefined' && window !== null) {
-  window.zooAPI = apiClient;
-}
-
-function handleError(request) {
+apiClient.handleError = function(request) {
   if (request.message) {
     throw request;
   } else if (request.responseText) {
@@ -28,13 +19,13 @@ function handleError(request) {
         errorMessage = errorMessage + ' ' + response.error_description;
       }
     } else if (response && response.errors && response.errors[0].message) {
-      errorMessage = response.errors.reduce(function (array, message) {
+      errorMessage = response.errors.reduce(function(array, message) {
         if (typeof message === 'string') {
           array.push(message);
         } else {
-            Object.keys(message).forEach(function (key) {
-              array.push(key + ' ' + message[key]);
-            });
+          Object.keys(message).forEach(function(key) {
+            array.push(key + ' ' + message[key]);
+          });
         }
       }, []).join('\n');
     }
@@ -44,13 +35,25 @@ function handleError(request) {
       errorMessage = [
         'There was a problem on the server.',
         request.responseURL,
-        '→'
-        request.status
-      ].join();
+        '→',
+        request.status,
+      ].join(' ');
     }
 
-    errorMessage = (errorMessage == null && request.responseText) ? request.responseText.trim() : request.status + ' ' + request.statusText;
+    if (errorMessage === undefined) {
+      if (responseText in request) {
+        errorMessage = request.responseText.trim();
+      } else {
+        errorMessage = request.status + ' ' + request.statusText;
+      }
+    }
 
     throw new Error(errorMessage);
   }
+};
+
+module.exports = apiClient;
+
+if (typeof window !== 'undefined') {
+  window.zooAPI = apiClient;
 }
