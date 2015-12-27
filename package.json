@@ -6,7 +6,8 @@
   "author": "Zooniverse",
   "license": "Apache-2.0",
   "dependencies": {
-    "json-api-client": "zooniverse/json-api-client#fix-requests"
+    "json-api-client": "zooniverse/json-api-client#fix-requests",
+    "sugar-client": "~1.0.1"
   },
   "devDependencies": {
     "blue-tape": "~0.1.11",
@@ -16,8 +17,8 @@
     "tap-spec": "~4.1.1"
   },
   "scripts": {
-    "build": "browserify src/apiClient.js -o dist/panoptes-client.js",
-    "lint": "jscs src",
+    "build": "browserify index.js --outfile panoptes-client-build.js",
+    "lint": "jscs lib",
     "test": "node test | tap-spec"
   }
 }

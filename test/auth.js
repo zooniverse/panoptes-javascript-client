@@ -1,5 +1,5 @@
 var test = require('blue-tape');
-var auth = require('../src/auth');
+var auth = require('../lib/auth');
 
 var TEST_LOGIN = 'TEST_' + new Date().toISOString().replace(/\W/g, '_');
 var TEST_EMAIL = TEST_LOGIN.toLowerCase() + '@zooniverse.org';
