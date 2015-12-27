@@ -22,14 +22,14 @@ module.exports = new Model({
     console.log('Getting auth token');
     var url = config.host + '/users/sign_in/?now=' + Date.now();
     return makeHTTPRequest('GET', url, null, JSON_HEADERS)
-      .then(function(request) {
-        var authToken = request.getResponseHeader('X-CSRF-Token');
+      .then(function(response) {
+        var authToken = response.header['x-csrf-token'];
         console.info('Got auth token', authToken.slice(-6));
         return authToken;
       })
-      .catch(function(request) {
+      .catch(function(response) {
         console.error('Failed to get auth token');
-        apiClient.handleError(request);
+        apiClient.handleError(response);
       });
   },
 
@@ -51,7 +51,7 @@ module.exports = new Model({
           var token = this._handleNewBearerToken(request);
           console.info('Got bearer token', token.slice(-6));
           return token;
-        })
+        }.bind(this))
         .catch(function(request) {
           // You're probably not signed in.
           console.error('Failed to get bearer token');
@@ -61,12 +61,12 @@ module.exports = new Model({
   },
 
   _handleNewBearerToken: function(request) {
-    var response = JSON.parse(request.responseText);
+    var response = JSON.parse(request.text);
 
     this._bearerToken = response.access_token;
     apiClient.headers.Authorization = 'Bearer ' + this._bearerToken;
 
-    var refresh = this_refreshBearerToken.bind(this, response.refresh_token);
+    var refresh = this._refreshBearerToken.bind(this, response.refresh_token);
     var timeToRefresh = (response.expires_in * 1000) - TOKEN_EXPIRATION_ALLOWANCE;
     this._bearerRefreshTimeout = setTimeout(refresh, timeToRefresh);
 
@@ -145,7 +145,7 @@ module.exports = new Model({
                   console.info('Registered account', user.login, user.id);
                   return user;
                 });
-              });
+              }.bind(this));
             })
             .catch(function(error) {
               console.error('Failed to register');
@@ -171,7 +171,7 @@ module.exports = new Model({
         _currentUserPromise: this._getBearerToken()
           .then(function() {
             return this._getSession();
-          })
+          }.bind(this))
           .catch(function() {
             // Nobody's signed in. This isn't an error.
             console.info('No current user');
@@ -184,14 +184,14 @@ module.exports = new Model({
   },
 
   signIn: function(credentials) {
-    var originalArguments = arguemnts;
+    var originalArguments = arguments;
     return this.checkCurrent().then(function(user) {
       if (user) {
         return this.signOut().then(function() {
           return this.signIn.apply(this, originalArguments);
         }.bind(this));
       } else {
-        console.log('Signing in', login);
+        console.log('Signing in', credentials.login);
         var signInRequest = this._getAuthToken().then(function(token) {
           var url = config.host + '/users/sign_in';
 
