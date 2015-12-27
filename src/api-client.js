@@ -6,47 +6,59 @@ var apiClient = new JSONAPIClient(config.host + '/api', {
   'Accept': 'application/vnd.api+json; version=1',
 });
 
-apiClient.handleError = function(request) {
-  if (request.message) {
-    throw request;
-  } else if (request.responseText) {
-    var errorMessage;
-    var response = JSON.parse(request.responseText);
+function formatError(piece) {
+  if (typeof piece === 'string') {
+    return piece;
+  } else if (Array.isArray(piece)) {
+    return piece.map(formatError).join(' ; ');
+  } else {
+    return Object.keys(piece).map(function(key) {
+      return key + ' -> ' + formatError(piece[key]);
+    }).join('\n');
+  }
+}
 
-    if (response && response.error) {
-      errorMessage = response.error;
-      if (response.error_description) {
-        errorMessage = errorMessage + ' ' + response.error_description;
-      }
-    } else if (response && response.errors && response.errors[0].message) {
-      errorMessage = response.errors.reduce(function(array, message) {
-        if (typeof message === 'string') {
-          array.push(message);
-        } else {
-          Object.keys(message).forEach(function(key) {
-            array.push(key + ' ' + message[key]);
-          });
+apiClient.handleError = function(response) {
+  var errorMessage;
+  if (response) {
+    if (response.message) {
+      // It looks like an error already, don't modify it.
+      throw response;
+    } else if (response.body) {
+      // An auto-parsed response, hooray. We'll build a string and throw an error.
+      if (response.body.error) {
+        errorMessage = response.body.error;
+        if (response.error_description) {
+          errorMessage += ' ' + response.error_description;
         }
-      }, []).join('\n');
-    }
-
-    // Manually set a reasonable error when we get HTML back (currently 500s will do this).
-    if (request.responseText.indexOf('<!DOCTYPE') !== -1 && errorMessage == null) {
-      errorMessage = [
-        'There was a problem on the server.',
-        request.responseURL,
-        '→',
-        request.status,
-      ].join(' ');
-    }
-
-    if (errorMessage === undefined) {
-      if (responseText in request) {
-        errorMessage = request.responseText.trim();
-      } else {
-        errorMessage = request.status + ' ' + request.statusText;
+      } else if (response.body.errors) {
+        if (response.body.errors.length === 1 && response.body.errors[0].message) {
+          errorMessage = formatError(response.body.errors[0].message);
+        } else {
+          errorMessage = formatError(response.body.errors);
+        }
       }
+    } else {
+      errorMessage = 'Christ, I don’t know.';
     }
+
+    // // Manually set a reasonable error when we get HTML back (currently 500s will do this).
+    // if (request.responseText.indexOf('<!DOCTYPE') !== -1 && errorMessage == null) {
+    //   errorMessage = [
+    //     'There was a problem on the server.',
+    //     request.responseURL,
+    //     '→',
+    //     request.status,
+    //   ].join(' ');
+    // }
+    //
+    // if (errorMessage === undefined) {
+    //   if (responseText in request) {
+    //     errorMessage = request.responseText.trim();
+    //   } else {
+    //     errorMessage = request.status + ' ' + request.statusText;
+    //   }
+    // }
 
     throw new Error(errorMessage);
   }

@@ -115,11 +115,12 @@ module.exports = new Model({
   },
 
   register: function(given) {
+    var originalArguments = arguments;
     return this.checkCurrent().then(function(user) {
       if (user) {
         return this.signOut().then(function() {
-          return this.register.apply(this, arguments);
-        });
+          return this.register.apply(this, originalArguments);
+        }.bind(this));
       } else {
         console.log('Registering new account', given.login);
         var registrationRequest = this._getAuthToken().then(function(token) {
@@ -141,17 +142,17 @@ module.exports = new Model({
           return apiClient.post('/../users', data, JSON_HEADERS)
             .then(function() {
               return this._getBearerToken().then(function() {
-                this._getSession().then(function(user) {
+                return this._getSession().then(function(user) {
                   console.info('Registered account', user.login, user.id);
                   return user;
                 });
               }.bind(this));
-            })
+            }.bind(this))
             .catch(function(error) {
               console.error('Failed to register');
               throw error;
             });
-        });
+        }.bind(this));
 
         this.update({
           _currentUserPromise: registrationRequest.catch(function() {
@@ -161,7 +162,7 @@ module.exports = new Model({
 
         return registrationRequest;
       }
-    });
+    }.bind(this));
   },
 
   checkCurrent: function() {
