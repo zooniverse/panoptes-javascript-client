@@ -5,7 +5,7 @@ var TEST_LOGIN = 'TEST_' + new Date().toISOString().replace(/\W/g, '_');
 var TEST_EMAIL = TEST_LOGIN.toLowerCase() + '@zooniverse.org';
 var TEST_PASSWORD = 'P@$$wørd';
 
-test('Checking the current user initially fails', (t) => {
+test('Checking the current user initially fails', function(t) {
   return auth.checkCurrent()
     .then((user) => {
       if (user) {
@@ -16,7 +16,7 @@ test('Checking the current user initially fails', (t) => {
     });
 });
 
-test('Registering an account with no data fails', (t) => {
+test('Registering an account with no data fails', function(t) {
   var BLANK_REGISTRATION = {};
   return auth.register(BLANK_REGISTRATION)
     .then(() => {
