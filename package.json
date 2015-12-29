@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "browserify index.js --outfile panoptes-client-build.js",
-    "lint": "jscs lib",
+    "lint": "jscs lib test",
     "test": "node test | tap-spec"
   }
 }
