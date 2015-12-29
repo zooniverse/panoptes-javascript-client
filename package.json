@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "json-api-client": "zooniverse/json-api-client#fix-requests",
-    "sugar-client": "~1.0.1"
+    "sugar-client": "^1.0.1"
   },
   "devDependencies": {
     "blue-tape": "~0.1.11",
