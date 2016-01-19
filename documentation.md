@@ -33,7 +33,7 @@ All your requests to the Panoptes API will use the `type()` method to set the Re
 
 #### Create a resource
 
-Set a type and use `create()` to create a new local resource. To save this resource to the API, call `save()` on the returned resource.
+Set a type and use `create()` to create a new local resource. To save it to the API, call its `save()` method.
 
 __Arguments__
 
@@ -49,9 +49,9 @@ var foo = apiClient.type('subject_set').create({
 });
 ```
 
-#### Update a resource
+#### Modify a resource
 
-Locally changes the properties of a resource by merging the arguments into its properties. To save the changes to the API, call `save()` on the resource.
+Locally changes the properties of a resource by merging the arguments into its properties. To save the changes to the API, call its `save()` method.
 
 __Arguments__
 
@@ -73,7 +73,7 @@ foo.update({
 
 #### Save a resource
 
-Saves a resource object back to the API.
+Saves a resource object to the API.
 
 __Returns__
 
