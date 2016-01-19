@@ -18,7 +18,18 @@ You can install the library from [NPM](https://www.npmjs.com/):
 
 ## Getting Started
 
-## Reference
+To use the client, you can `require` it in:
+
+``` javascript
+// ES5
+var Panoptes = require('panoptes-client');
+
+// ES6
+import Panoptes from 'panoptes-client';
+
+// ES6: just the apiClient
+import { apiClient } from 'panoptes-client';
+```
 
 The library exposes the following modules:
 
@@ -27,42 +38,99 @@ The library exposes the following modules:
 - [`talkClient`](#panoptes-javascript-client-talkclient)
 - [`sugar`](#panoptes-javascript-client-sugar)
 
-### apiClient
+## apiClient
 
-All your requests to the Panoptes API will use the `type()` method to set the Resource type you'll be working with. Other verbs are then chained on to the end.
+The `apiClient` module gives you access to the Panoptes API, allowing you to work with subjects, sets, users, and other resources. A full list is available on the Panoptes API docs.
 
-#### Create a resource
+### Working with Types
 
-Set a type and use `create()` to create a new local resource. To save it to the API, call its `save()` method.
+An Type basically represents an API endpoint. Type objects are usually chained to their methods in order to perform queries, or create new Resources at that endpoint.
+
+#### apiClient.type(type)
+
+Creates a new Type object of a given type.
+
+``` javascript
+var subjectType = apiClient.type('subjects');
+```
 
 __Arguments__
 
-- options _(object)_ - the properties for the new resource
+- type _(string)_ - the type of Resource to be used
 
 __Returns__
 
-- Resource _(object)_
+- Type _(object)_ - a Type object
 
+#### Type.get(id, parameters)
+
+Retrieves a single Resource, or an array of Resources.
+
+__Arguments__
+
+- id _(string / array)_ - the id, or array of ids to retrieve
+- parameters _(object)_ - the query parameters to use
+
+__Returns__
+
+- Promise _(object)_ - resolves to a single Resource or an array of Resources
+
+``` javascript
+// Retrieve a Resource by ID
+apiClient.type('subjects').get('1')
+    .then(function (subject) {
+        console.log(subject);
+    });
+}
+
+// Retrieve multiple Resources by ID
+apiClient.type('subjects').get(['1', '2', '3'])
+    .then(function (subjects) { 
+        console.log(subjects);
+    });
+
+// Retrieve a Resource by ID, skipping local cache
+// (Any request with query params is passed to the server.)
+apiClient.type('subjects').get('1', {}))
+    .then(function (subjects) {
+        console.log(subjects);
+    });
+
+// Retrieve a Resource by query (likewise, this is never cached)
+apiClient.type('subjects').get({ id: '1' })
+    .then(function (subjects) {
+        console.log(subjects);
+    });
 ```
-var foo = apiClient.type('subject_set').create({
+
+#### Type.create(parameters)
+
+Set a type and use `create()` to create a new local Resource. To save it to the API, call its `save()` method.
+
+``` javascript
+var foo = apiClient.type('subject_sets').create({
     name: 'foo'
 });
 ```
 
-#### Modify a resource
-
-Locally changes the properties of a resource by merging the arguments into its properties. To save the changes to the API, call its `save()` method.
-
 __Arguments__
 
-- options _(object)_ - the properties to change for the resource
+- options _(object)_ - the properties of the new Resource
 
 __Returns__
 
 - Resource _(object)_
 
-```
-var foo = apiClient.type('subject_set').create({
+### Working with Resources
+
+Resource objects have the following methods available:
+
+#### Resource.update(parameters)
+
+Locally changes the properties of a resource by merging the arguments into its properties. To save the changes to the API, call its `save()` method.
+
+``` javascript
+var foo = apiClient.type('subject_sets').create({
     name: 'foo'
 });
 
@@ -71,16 +139,21 @@ foo.update({
 });
 ```
 
-#### Save a resource
+__Arguments__
 
-Saves a resource object to the API.
+- parameters _(object)_ - the parameters to change for the resource
 
 __Returns__
 
-- Promise _(object)_ - resolves to the saved resource, or an error
+- Resource _(object)_
 
-```
-var foo = apiClient.type('subject_set').create({
+
+#### Resource.save()
+
+Saves a resource object to the API.
+
+``` javascript
+var foo = apiClient.type('subject_sets').create({
     name: 'foo'
 });
 
@@ -90,8 +163,59 @@ foo.save()
     })
 ```
 
+__Returns__
 
-### Auth
+- Promise _(object)_ - resolves to the saved Resource, or an error
+
+#### Resource.delete()
+
+Delete a resource object from the API.
+
+``` javascript
+var foo = apiClient.type('subject_sets').get('123');
+
+foo.delete();
+```
+
+#### Resource.listen(function)
+
+Start listening to a resource for changes.
+
+``` javascript
+apiClient.type('subjects').get('1')
+    .then(function(subject) {
+        subject.listen(handler);
+    });
+
+function handler() {
+    console.log('The resource changed.');
+}
+```
+
+__Arguments__
+
+- function _(function)_ - a reference to the function to be called when the resource changes.
+
+#### Resource.listen(function)
+
+Stop listening to a resource for changes.
+
+``` javascript
+apiClient.type('subjects').get('1')
+    .then(function(subject) {
+        subject.stopListening(handler);
+    });
+
+function handler() {
+    console.log('The resource changed.');
+}
+```
+
+__Arguments__
+
+- function _(function)_ - a reference to the function to be unbound.g
+
+## Auth
 
 #### login()
 
