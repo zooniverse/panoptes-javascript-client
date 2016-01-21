@@ -13,7 +13,6 @@
     "blue-tape": "~0.1.11",
     "browserify": "^12.0.1",
     "jscs": "^2.7.0",
-    "superagent": "^1.6.1",
     "tap-spec": "~4.1.1"
   },
   "scripts": {
