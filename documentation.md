@@ -1,20 +1,18 @@
 # Panoptes Javascript Client
 
-Work with the Panoptes API without writing a bunch of requests.
+A full-featured client for handling API requests, authentication, and Talk in Zooniverse projects.
 
-## Core Concepts
+## Core API Concepts
 
 The Panoptes API is built on the [JSON-API spec](http://jsonapi.org/); reading the spec is the best way to understand it, but for the short version, read on...
 
-The basic unit is the __Resource__. A Resource has a unique ID, and a type. In the case of the Zooniverse, type will correspond to things like projects, subjects and classifications.
-
-Resources can also be __linked__ to each other, so subjects can be members of subject sets.
+The basic unit is the __Resource__. A Resource has a unique ID, and a type. In the case of the Zooniverse, type will correspond to things like projects, subjects and classifications. Resources can also be __linked__ to each other, so subjects can be members of subject sets.
 
 ## Installing
 
-You can install the library from [NPM](https://www.npmjs.com/):
+You can install the client from [NPM](https://www.npmjs.com/package/panoptes-client):
 
-`npm install panoptes-javascript-client`
+`npm install panoptes-client`
 
 ## Getting Started
 
@@ -54,6 +52,8 @@ Creates a new Type object of a given type.
 var subjectType = apiClient.type('subjects');
 ```
 
+> Type objects are almost always chained to `.get()` or `.create()`.
+
 __Arguments__
 
 - type _(string)_ - the type of Resource to be used
@@ -62,13 +62,14 @@ __Returns__
 
 - Type _(object)_ - a Type object
 
+
 #### Type.get(id, parameters)
 
 Retrieves a single Resource, or an array of Resources.
 
 __Arguments__
 
-- id _(string / array)_ - the id, or array of ids to retrieve
+- id _(string / array)_ - the ID, or array of IDs to retrieve. *IDs must be strings*
 - parameters _(object)_ - the query parameters to use
 
 __Returns__
@@ -179,7 +180,7 @@ foo.delete();
 
 #### Resource.listen(function)
 
-Start listening to a resource for changes.
+Start listening to a resource for changes, and call `function` on change.
 
 ``` javascript
 apiClient.type('subjects').get('1')
@@ -194,9 +195,9 @@ function handler() {
 
 __Arguments__
 
-- function _(function)_ - a reference to the function to be called when the resource changes.
+- function _(function)_ - function to be called when the resource changes
 
-#### Resource.listen(function)
+#### Resource.stopListening(function)
 
 Stop listening to a resource for changes.
 
@@ -213,7 +214,7 @@ function handler() {
 
 __Arguments__
 
-- function _(function)_ - a reference to the function to be unbound.g
+- function _(function)_ - the function to be unbound
 
 ## Auth
 
@@ -223,5 +224,5 @@ __Arguments__
 
 ## Useful Links
 
-- JSON API spec
-- Panoptes API documentation
+- [JSON API spec](http://jsonapi.org/)
+- [Panoptes API documentation](http://docs.panoptes.apiary.io/)
