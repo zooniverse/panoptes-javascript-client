@@ -2,28 +2,21 @@
 
 A Javascript client for accessing the [Panoptes API](https://github.com/zooniverse/Panoptes).
 
-In early stages of development, use with caution.
-
 ### Installation
 
+You can install the client from [NPM](https://www.npmjs.com/package/panoptes-client):
+
+```npm install panoptes-client```
+
+and use it with:
+
 ```
-npm install panoptes-client
 {auth, apiClient, talkClient} = require('panoptes-client');
 ```
 
-### Usage
+### Documentation
 
-#### auth
-
-TODOC auth functions:
-
-- `register`
-
-- `signIn`
-
-- `signOut`
-
-- etc.
+The documentation for the library is available at [https://zooniverse.github.io/panoptes-javascript-client/](https://zooniverse.github.io/panoptes-javascript-client/). If there's anything missing, submit a PR!
 
 #### Resource access
 
@@ -32,6 +25,10 @@ The Panoptes API is built on the very generically named [JSON API Spec](http://j
 ### Conventions
 
 This project adheres to [Semantic Versioning](http://semver.org/), and follows the changelog format set out at [Keep a CHANGELOG](http://keepachangelog.com/).
+
+### Running the tests
+
+Tests (via [tap](https://github.com/tapjs/node-tap)) exist for the `auth` module, and can be run with `npm run test`.
 
 ### License
 
