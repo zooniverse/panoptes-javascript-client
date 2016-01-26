@@ -7,7 +7,7 @@ var TEST_PASSWORD = 'P@$$wørd';
 
 test('Checking the current user initially fails', function(t) {
   return auth.checkCurrent()
-    .then((user) => {
+    .then(function(user) {
       if (user) {
         t.fail('Nobody should be signed in');
       } else {
@@ -19,10 +19,10 @@ test('Checking the current user initially fails', function(t) {
 test('Registering an account with no data fails', function(t) {
   var BLANK_REGISTRATION = {};
   return auth.register(BLANK_REGISTRATION)
-    .then(() => {
+    .then(function() {
       t.fail('Should not have been able to register');
     })
-    .catch((error) => {
+    .catch(function(error) {
       t.pass('An error should have been thrown.');
       t.ok(error.message.match(/^login(.+)blank/mi), 'Login error should mention "blank"');
       t.ok(error.message.match(/^email(.+)blank/mi), 'Email error should mention "blank"');
