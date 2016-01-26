@@ -2,7 +2,16 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.1.2] = 2015-06-04
+## [1.0.0]
+### Changed
+- Client has been completely rewritten in ES5 for maximum compatibility
+
+### Added
+- Adds the `talk` and `sugar` clients, primarily used in Panoptes-Front-End, so PFE can rely exclusively on this library
+- Documentation website at https://zooniverse.github.io/panoptes-javascript-client/ (deployed via the `gh-pages` branch)
+- Linting with JSCS
+
+## [0.1.2] - 2015-06-04
 ### Added
 - This change log (woo, meta)
 

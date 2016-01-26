@@ -1,31 +1,23 @@
 {
   "name": "panoptes-client",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A Javascript client to access the Panoptes API",
   "main": "./lib/client.js",
   "author": "Zooniverse",
   "license": "Apache-2.0",
-  "engine": {
-    "node": "0.12.x"
-  },
   "dependencies": {
-    "json-api-client": "~0.2.6",
-    "promise": "~7.0.0"
+    "json-api-client": "~3.0.0",
+    "sugar-client": "^1.0.1"
   },
   "devDependencies": {
-    "babel": "~5.4.2",
-    "babelify": "~6.0.2",
-    "blue-tape": "~0.1.8",
-    "browserify": "~9.0.8",
-    "function-bind": "~1.0.2",
-    "tap-spec": "~2.1.1",
-    "testling": "~1.7.1",
-    "watchify": "~3.1.1"
+    "blue-tape": "~0.1.11",
+    "browserify": "^12.0.1",
+    "jscs": "^2.7.0",
+    "tap-spec": "~4.1.1"
   },
   "scripts": {
-    "build": "browserify ./src/client.js -t babelify -o ./dist/panoptes-client.js",
-    "watch": "babel ./src --out-dir ./lib",
-    "test": "browserify ./test/runner.js -t babelify | testling \"${TESTLING_ARGS:---pass}\" | tap-spec",
-    "test-mac": "TESTLING_ARGS=\"-x open --new -a Google\\ Chrome --args --incognito\" npm run test"
+    "build": "browserify index.js --outfile panoptes-client-build.js",
+    "lint": "jscs lib test",
+    "test": "node test | tap-spec"
   }
 }

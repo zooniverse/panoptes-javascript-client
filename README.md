@@ -1,36 +1,34 @@
 ## Panoptes Client
 
-A Javascript client for accessing the [Panoptes API](github.com/zooniverse/Panoptes).
+A Javascript client for accessing the [Panoptes API](https://github.com/zooniverse/Panoptes).
 
-In early stages of development, use with caution.
+### Installation
 
-### Installing
+You can install the client from [NPM](https://www.npmjs.com/package/panoptes-client):
 
-```
-npm install panoptes-client
-PanoptesClient = require('panoptes-client');
-// or
-bower install panoptes-client
-<script type="text/javascript" src="./path/to/component/dist/index.js" />
-```
+```npm install panoptes-client```
 
-### Using
-
-The Panoptes API is built on the very generically named [JSON API Spec](http://jsonapi.org/). This client leans heavily on [this library](https://github.com/brian-c/json-api-client) to make it easy to access different resources that the API offers.
-
-#### Using in Node
-
-The client requires polyfills for Promises and XMLHttpRequest - without them, it'll exit silently. Node 0.12 includes native promise support, so installing `xmlhttprequest-cookie` and adding the following line should get it working:
+and use it with:
 
 ```
-global.XMLHttpRequest = require('xmlhttprequest-cookie').XMLHttpRequest;
+{auth, apiClient, talkClient} = require('panoptes-client');
 ```
 
-Cookie support is required for any authenticated request.
+### Documentation
+
+The documentation for the library is available at [https://zooniverse.github.io/panoptes-javascript-client/](https://zooniverse.github.io/panoptes-javascript-client/). If there's anything missing, submit a PR!
+
+#### Resource access
+
+The Panoptes API is built on the very generically named [JSON API Spec](http://jsonapi.org/). This client leans heavily on [this library](https://github.com/zooniverse/json-api-client) to make it easy to access different resources that the API offers.
 
 ### Conventions
 
 This project adheres to [Semantic Versioning](http://semver.org/), and follows the changelog format set out at [Keep a CHANGELOG](http://keepachangelog.com/).
+
+### Running the tests
+
+Tests (via [tap](https://github.com/tapjs/node-tap)) exist for the `auth` module, and can be run with `npm run test`.
 
 ### License
 
