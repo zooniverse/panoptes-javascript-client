@@ -1,7 +1,7 @@
 var oauth = require('../lib/oauth');
 
-// This is just a temporary app ID for testing.
-var WILDCAM_GORONGOSA_EDUCATION_APP_ID = '64aa60e488a555e2ef8b7f9d1621ec7e430dcb8b8baa0d00b8460eca5660d188';
+// This is just a temporary app ID for testing on staging.
+var WILDCAM_GORONGOSA_EDUCATION_APP_ID = '17bdbeb57f54a3bf6344cf7150047879cfa1c8d5f9fd77d64923e6c81fe6e949';
 
 document.body.insertAdjacentHTML('beforeend', [
   'Check the console.<br />',
