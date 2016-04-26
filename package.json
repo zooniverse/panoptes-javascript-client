@@ -2,7 +2,7 @@
   "name": "panoptes-client",
   "version": "2.2.0",
   "description": "A Javascript client to access the Panoptes API",
-  "main": "./lib/client.js",
+  "main": "./lib/api-client.js",
   "author": "Zooniverse",
   "license": "Apache-2.0",
   "dependencies": {
