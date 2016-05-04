@@ -22,11 +22,14 @@ To use the client, you can `require` it in:
 // ES5
 var Panoptes = require('panoptes-client');
 
+// ES5: just the apiClient
+var apiClient = require('panoptes-client/lib/api-client');
+
 // ES6
 import Panoptes from 'panoptes-client';
 
 // ES6: just the apiClient
-import { apiClient } from 'panoptes-client';
+import apiClient from 'panoptes-client/lib/api-client';
 ```
 
 The library exposes the following modules:
