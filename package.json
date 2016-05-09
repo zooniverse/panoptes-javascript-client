@@ -21,6 +21,7 @@
     "build": "browserify index.js --outfile panoptes-client-build.js",
     "lint": "jscs lib test",
     "start-oauth-example": "beefy ./examples/oauth.js",
-    "test": "node test | tap-spec"
+    "test": "node ./test/index.js | tap-spec",
+    "test-stats": "NODE_ENV=production node ./test/stats.js | tap-spec"
   }
 }
