@@ -6,7 +6,7 @@
   "author": "Zooniverse",
   "license": "Apache-2.0",
   "dependencies": {
-    "json-api-client": "~3.1.0",
+    "json-api-client": "~3.2.0",
     "sugar-client": "^1.0.1",
     "local-storage": "^1.4.2"
   },
