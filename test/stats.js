@@ -11,11 +11,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 test('We can get stats for a project', function(t) {
   return statsClient.query({
-    project_id: GALAXY_ZOO_BARS_ID,
-    workflow_id: GALAXY_ZOO_BARS_WORKFLOW_ID,
+    projectID: GALAXY_ZOO_BARS_ID,
+    workflowID: GALAXY_ZOO_BARS_WORKFLOW_ID,
     type: 'classification',
     period: 'day'
   }).then(function(results) {
-    return t.ok(Array.isArray(results));
+    return t.ok(Array.isArray(results), 'Should get an array back');
   });
 });
