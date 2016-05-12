@@ -10,10 +10,22 @@ You can install the client from [NPM](https://www.npmjs.com/package/panoptes-cli
 
 and use it with:
 
+ES5
+
 ```
 apiClient = require('panoptes-client/lib/api-client');
 auth = require('panoptes-client/lib/auth');
+oauth = require('panoptes-client/lib/oauth');
 talkClient = require('panoptes-client/lib/talk-client');
+```
+
+ES6
+
+```
+import apiClient from 'panoptes-client/lib/api-client'
+import auth from 'panoptes-client/lib/auth'
+import oauth from 'panoptes-client/lib/oauth'
+import talkClient from 'panoptes-client/lib/talk-client'
 ```
 
 ### Documentation
