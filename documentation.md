@@ -36,8 +36,9 @@ The library exposes the following modules:
 
 - [`apiClient`](#panoptes-javascript-client-apiclient)
 - [`auth`](#panoptes-javascript-client-auth)
-- [`talkClient`](#panoptes-javascript-client-talkclient)
+- [`oauth`](#panoptes-javascript-client-oauth)
 - [`sugar`](#panoptes-javascript-client-sugar)
+- [`talkClient`](#panoptes-javascript-client-talkclient)
 
 ## apiClient
 
