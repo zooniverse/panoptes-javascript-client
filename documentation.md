@@ -40,6 +40,40 @@ The library exposes the following modules:
 - [`sugar`](#panoptes-javascript-client-sugar)
 - [`talkClient`](#panoptes-javascript-client-talkclient)
 
+## Configuring your environment
+
+There are currently options for running the client against the `staging` and `production` environments, which determine which endpoints are used for requests handled by the module. There are a few different ways to set which you want to use - __staging is the default environment__.
+
+__Setting the environment via URL parameter__
+
+If you're running the client in the browser, you can use the `env` URL parameter to override the current environment, like this:
+
+```
+// Default to staging
+http://localhost:3000
+
+// Switch to production
+http://localhost:3000?env=production
+```
+
+If you're running an app using hash history, you'll need to add `?env=` _before_ the #, like this:
+
+```
+http://localhost:3000?env=production#/classify
+```
+
+__Setting the environment via `NODE_ENV`__
+
+This is usually used for build processes etc before deployment. Note that setting `NODE_ENV` to production may have unintended side effects such as reduced logging, config changes to other parts of your app etc.
+
+```
+NODE_ENV=production npm run build
+```
+
+__Setting individual endpoints__
+
+You can use the methods above to override the individual endpoints for each service. This isn't normally necessary, but look at [config.js](https://github.com/zooniverse/panoptes-javascript-client/blob/master/lib/config.js) for details on syntax to use.
+
 ## apiClient
 
 The `apiClient` module gives you access to the Panoptes API, allowing you to work with subjects, sets, users, and other resources. A full list is available on the Panoptes API docs.
