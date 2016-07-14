@@ -220,11 +220,59 @@ __Arguments__
 
 - function _(function)_ - the function to be unbound
 
-## Auth
+## OAuth
 
-#### login()
+The OAuth module lets you use authenticate a user using the OAuth implicit grant method. Tokens are refreshed before they expire (currently at 2 hours).
 
-#### logout()
+### oauth.init(appID) 
+
+Attempts to pick up an existing session, after which it checks for token details in the URL. This should be run before the start of your app, and the app init function chained to it. A React app might look like this:
+
+```
+oauth.init(APP_ID)
+  .then(function () {
+    ReactDOM.render(
+      // Add in your routes etc here...
+    )
+  });
+```
+
+__Arguments__
+
+- appID _(string)_ - the OAuth app id to be used
+
+__Returns__
+
+- promise - resolves to the user object
+
+### oauth.signIn(redirectUri)
+
+Starts the sign in process. If there's an existing session, it'll be cleared and the user redirected to the Panoptes sign in page.
+
+__Arguments__
+
+- redirectUri _(string)_ - the URI to be returned to after the sign in process is completed and the user is returned to the app.
+
+
+### oauth.signOut()
+
+Signs the user out, both of the app and their Panoptes session.
+
+__Returns__
+
+- promise - resolves to null once the Panoptes session is terminated
+
+### oauth.checkCurrent()
+
+Attempts to retrieve the authorized user object.
+
+__Returns__
+
+- promise - resolves to a user object if there is an existing session, or null otherwise
+
+#### How it works
+
+The OAuth module works by creating a hidden iFrame and trying to open the Panoptes sign in page in it. If there's an existing session, it'll return your token details _without redirecting_, and those are extracted from the iFrame URL. If there isn't, it'll try and redirect you to the actual sign in page, which constitutes a security violation and throws an error. This is picked up and the client redirects the main window so the user can sign in.
 
 ## Useful Links
 
