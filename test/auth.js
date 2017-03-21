@@ -1,5 +1,7 @@
 var test = require('blue-tape');
+
 var auth = require('../lib/auth');
+var config = require('../lib/config');
 
 var TEST_LOGIN = 'TEST_' + new Date().toISOString().replace(/\W/g, '_');
 var TEST_EMAIL = TEST_LOGIN.toLowerCase() + '@zooniverse.org';
@@ -145,4 +147,36 @@ test('Disabling an account works', function(t) {
           t.pass('Could not sign in to a disabled account');
         });
     });
+});
+
+test('First step of signin with OAuth works', function(t) {
+  t.plan(2);
+  t.throws(auth.signInWithOAuthRedirect, 'Should not work outside the browser');
+
+  var GOOD_OAUTH_LOGIN_DETAILS = {
+    appId: '24ad5676d5d25c6aa850dc5d5f63ec8c03dbc7ae113b6442b8571fce6c5b974c',
+    redirectUri: 'http://localhost',
+  };
+
+  var url = [
+    config.host,
+    '/oauth/authorize',
+    '?response_type=token',
+    '&client_id=',
+    GOOD_OAUTH_LOGIN_DETAILS.appId,
+    '&redirect_uri=',
+    GOOD_OAUTH_LOGIN_DETAILS.redirectUri
+  ].join('');
+
+  var windowMock = {
+    location: {
+      href: ''
+    }
+  };
+
+  return auth.signInWithOAuthRedirect(GOOD_OAUTH_LOGIN_DETAILS, windowMock)
+    .then(function () {
+      t.equal(windowMock.location.href, url, 'Should have been taken to the OAuth login page');
+    });
+
 });
