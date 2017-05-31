@@ -13,12 +13,10 @@
   "devDependencies": {
     "beefy": "^2.1.6",
     "blue-tape": "~0.1.11",
-    "browserify": "^12.0.1",
     "jscs": "^2.7.0",
     "tap-spec": "~4.1.1"
   },
   "scripts": {
-    "build": "browserify index.js --outfile panoptes-client-build.js",
     "lint": "jscs lib test",
     "start-oauth-example": "beefy ./examples/oauth.js",
     "test": "node ./test/index.js | tap-spec",
