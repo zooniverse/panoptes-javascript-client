@@ -32,6 +32,10 @@ import talkClient from 'panoptes-client/lib/talk-client'
 
 The documentation for the library is available at [https://zooniverse.github.io/panoptes-javascript-client/](https://zooniverse.github.io/panoptes-javascript-client/). If there's anything missing, submit a PR!
 
+#### Example usage
+
+Here's [an example of how to use the Panoptes Javascript Client](https://gist.github.com/alexbfree/ad6a8ba66483f403dcb717099764ee13). You can run it by typing `node panoptes-javascript-client-example.js -u username -p password` where `username` and `password` are your Panoptes staging credentials. To use production, you just need to `export NODE_ENV=production` first.
+
 #### Resource access
 
 The Panoptes API is built on the very generically named [JSON API Spec](http://jsonapi.org/). This client leans heavily on [this library](https://github.com/zooniverse/json-api-client) to make it easy to access different resources that the API offers.
