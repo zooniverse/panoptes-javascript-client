@@ -8,7 +8,8 @@
     "dev": "webpack --progress --colors --watch --env dev",
     "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
     "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js",
-    "lint": "eslint .; exit 0"
+    "lint": "eslint .; exit 0",
+    "lint:watch": "esw --watch --color"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -19,6 +20,7 @@
     "babel-preset-es2015": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-loader": "^1.7.1",
+    "eslint-watch": "^3.1.1",
     "mocha": "^3.3.0",
     "webpack": "^2.4.1",
     "yargs": "^7.1.0"
