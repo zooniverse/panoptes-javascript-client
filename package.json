@@ -1,25 +1,14 @@
 {
   "name": "panoptes-client",
-  "version": "2.7.2",
+  "version": "3.0.0",
   "description": "A Javascript client to access the Panoptes API",
   "main": "./lib/api-client.js",
   "author": "Zooniverse",
   "license": "Apache-2.0",
   "dependencies": {
-    "json-api-client": "~3.2.0",
-    "sugar-client": "^1.0.1",
-    "local-storage": "^1.4.2"
   },
   "devDependencies": {
-    "beefy": "^2.1.6",
-    "blue-tape": "~0.1.11",
-    "jscs": "^2.7.0",
-    "tap-spec": "~4.1.1"
   },
   "scripts": {
-    "lint": "jscs lib test",
-    "start-oauth-example": "beefy ./examples/oauth.js",
-    "test": "node ./test/index.js | tap-spec",
-    "test-stats": "NODE_ENV=production node ./test/stats.js | tap-spec"
   }
 }
