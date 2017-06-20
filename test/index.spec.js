@@ -4,8 +4,13 @@
 /* eslint prefer-arrow-callback: 0, func-names: 0 */
 /* global describe, it, before */
 
-import assert from 'assert';
-import Library from '../lib/library.js';
+import chai from 'chai';
+import chaiAsPromised from 'chai-as-promised';
+
+import Library from '../lib/index.js';
+
+chai.use(chaiAsPromised);
+const expect = chai.expect;
 
 let lib;
 
@@ -17,7 +22,7 @@ describe('Given an instance of my library', function () {
 
   describe('when I need the name', function () {
     it('should return the name', function () {
-      assert.strictEqual(lib.name, 'Library');
+      expect(lib.name).to.equal('Library');
     });
   });
 
