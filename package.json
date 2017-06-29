@@ -5,11 +5,11 @@
   "main": "./lib/api-client.js",
   "scripts": {
     "build": "webpack --env build",
-    "dev": "webpack --progress --colors --watch --env dev",
-    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
-    "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js",
+    "dev": "webpack --display-error-details --progress --colors --watch --env dev",
     "lint": "eslint .; exit 0",
-    "lint:watch": "esw --watch --color"
+    "lint:watch": "esw --watch --color",
+    "test": "find ./src -name '*.spec.js' | xargs mocha --compilers js:babel-core/register --colors  --reporter min",
+    "test:watch": "find ./src -name '*.spec.js' | xargs mocha --compilers js:babel-core/register --colors --reporter min --watch"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
