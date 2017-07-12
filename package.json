@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --env build",
     "dev": "webpack --display-error-details --progress --colors --watch --env dev",
-    "lint": "eslint ./src *.js; exit 0",
+    "lint": "npm run lint:common; exit 0",
+    "lint:common": "eslint ./src *.js",
     "lint:watch": "esw --watch --color ./src *.js",
     "test": "find ./src -name '*.spec.js' | xargs mocha",
     "test:watch": "npm run test -- --watch"
@@ -36,8 +37,5 @@
   },
   "homepage": "https://github.com/zooniverse/panoptes-javascript-client",
   "author": "Zooniverse",
-  "license": "Apache-2.0",
-  "dependencies": {
-    "superagent": "^3.5.2"
-  }
+  "license": "Apache-2.0"
 }
