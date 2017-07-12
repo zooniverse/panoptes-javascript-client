@@ -9,7 +9,7 @@
     "lint": "eslint .; exit 0",
     "lint:watch": "esw --watch --color",
     "test": "find ./src -name '*.spec.js' | xargs mocha --compilers js:babel-core/register --colors  --reporter min",
-    "test:watch": "find ./src -name '*.spec.js' | xargs mocha --compilers js:babel-core/register --colors --reporter min --watch"
+    "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
