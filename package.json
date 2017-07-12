@@ -1,25 +1,41 @@
 {
   "name": "panoptes-client",
-  "version": "2.7.2",
+  "version": "3.0.0",
   "description": "A Javascript client to access the Panoptes API",
   "main": "./lib/api-client.js",
-  "author": "Zooniverse",
-  "license": "Apache-2.0",
-  "dependencies": {
-    "json-api-client": "~3.2.0",
-    "sugar-client": "^1.0.1",
-    "local-storage": "^1.4.2"
+  "scripts": {
+    "build": "webpack --env build",
+    "dev": "webpack --display-error-details --progress --colors --watch --env dev",
+    "lint": "npm run lint:common; exit 0",
+    "lint:common": "eslint ./src *.js",
+    "lint:watch": "esw --watch --color ./src *.js",
+    "test": "find ./src -name '*.spec.js' | xargs mocha",
+    "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
-    "beefy": "^2.1.6",
-    "blue-tape": "~0.1.11",
-    "jscs": "^2.7.0",
-    "tap-spec": "~4.1.1"
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.0.2",
+    "chai-as-promised": "^7.0.0",
+    "eslint": "^3.19.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-watch": "^3.1.1",
+    "mocha": "^3.3.0",
+    "webpack": "^2.4.1",
+    "yargs": "^7.1.0"
   },
-  "scripts": {
-    "lint": "jscs lib test",
-    "start-oauth-example": "beefy ./examples/oauth.js",
-    "test": "node ./test/index.js | tap-spec",
-    "test-stats": "NODE_ENV=production node ./test/stats.js | tap-spec"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zooniverse/panoptes-javascript-client"
+  },
+  "bugs": {
+    "url": "https://github.com/zooniverse/panoptes-javascript-client/issues"
+  },
+  "homepage": "https://github.com/zooniverse/panoptes-javascript-client",
+  "author": "Zooniverse",
+  "license": "Apache-2.0"
 }
