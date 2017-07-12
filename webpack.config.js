@@ -24,27 +24,27 @@ const config = {
     filename: outputFile,
     library: libraryName,
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
   },
   module: {
     rules: [
       {
         test: /(\.js)$/,
         loader: 'babel-loader',
-        exclude: /(node_modules|bower_components)/
+        exclude: /(node_modules|bower_components)/,
       },
       {
         test: /(\.js)$/,
         loader: 'eslint-loader',
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
     modules: [path.resolve('./src')],
-    extensions: ['.json', '.js']
+    extensions: ['.json', '.js'],
   },
-  plugins: plugins
+  plugins: plugins,
 };
 
 module.exports = config;
