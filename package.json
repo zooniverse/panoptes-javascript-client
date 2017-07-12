@@ -8,7 +8,7 @@
     "dev": "webpack --display-error-details --progress --colors --watch --env dev",
     "lint": "eslint ./src *.js; exit 0",
     "lint:watch": "esw --watch --color ./src *.js",
-    "test": "find ./src -name '*.spec.js' | xargs mocha --compilers js:babel-core/register --colors  --reporter min",
+    "test": "find ./src -name '*.spec.js' | xargs mocha --compilers js:babel-core/register",
     "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
@@ -36,5 +36,8 @@
   },
   "homepage": "https://github.com/zooniverse/panoptes-javascript-client",
   "author": "Zooniverse",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "superagent": "^3.5.2"
+  }
 }
