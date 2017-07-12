@@ -1,7 +1,8 @@
-/* "Passing arrow functions (“lambdas”) to Mocha is discouraged" */
-/* - https://mochajs.org/#arrow-functions */
+/* eslint
+  func-names: 0,
+  prefer-arrow-callback: 0
+*/
 
-/* eslint prefer-arrow-callback: 0, func-names: 0 */
 /* global describe, it, before */
 
 import chai from 'chai';
