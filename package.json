@@ -8,7 +8,7 @@
     "dev": "webpack --display-error-details --progress --colors --watch --env dev",
     "lint": "eslint ./src *.js; exit 0",
     "lint:watch": "esw --watch --color ./src *.js",
-    "test": "find ./src -name '*.spec.js' | xargs mocha --compilers js:babel-core/register",
+    "test": "find ./src -name '*.spec.js' | xargs mocha",
     "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {

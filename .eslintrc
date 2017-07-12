@@ -11,21 +11,6 @@
     "node": true
   },
 
-  "overrides": [
-    {
-      "env": {
-        "mocha": true
-      },
-      "files": [
-        "*.spec.js"
-      ],
-      "rules": {
-        func-names: 0,
-        "prefer-arrow-callback": 0
-      }
-    }
-  ],
-
   "parser": "babel-eslint",
 
   "plugins": [],
