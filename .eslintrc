@@ -43,6 +43,8 @@
 
   "plugins": [],
 
+  "root": true,
+
   "rules": {
     "block-scoped-var": 2,
     "brace-style": [2, "1tbs", { "allowSingleLine": true }],
