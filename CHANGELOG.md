@@ -1,5 +1,12 @@
 # Change Log
 
+## [v2.9.4](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.4) (2018-02-27)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.3...v2.9.4)
+
+**Merged pull requests:**
+
+- Various OAuth bug fixes [\#85](https://github.com/zooniverse/panoptes-javascript-client/pull/85) ([eatyourgreens](https://github.com/eatyourgreens))
+
 ## [v2.9.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.3) (2018-02-23)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.2...v2.9.3)
 
