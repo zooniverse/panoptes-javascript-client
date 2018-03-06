@@ -1,5 +1,17 @@
 # Change Log
 
+## [v2.9.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.5) (2018-03-06)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.4...v2.9.5)
+
+**Closed issues:**
+
+- `\_handleNewBearerToken\(\)` florps on `.slice\(\)` [\#84](https://github.com/zooniverse/panoptes-javascript-client/issues/84)
+
+**Merged pull requests:**
+
+- Replace \_checkPanoptesSession with \_getNewToken [\#86](https://github.com/zooniverse/panoptes-javascript-client/pull/86) ([eatyourgreens](https://github.com/eatyourgreens))
+
+
 ## [v2.9.4](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.4) (2018-02-27)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.3...v2.9.4)
 
@@ -12,6 +24,7 @@
 
 **Merged pull requests:**
 
+- Massive changelog update [\#83](https://github.com/zooniverse/panoptes-javascript-client/pull/83) ([eatyourgreens](https://github.com/eatyourgreens))
 - OAuth improvements [\#82](https://github.com/zooniverse/panoptes-javascript-client/pull/82) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.2) (2018-02-13)
