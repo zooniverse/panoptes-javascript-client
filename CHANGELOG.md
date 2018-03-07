@@ -1,7 +1,7 @@
 # Change Log
 
-## [v2.9.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.5) (2018-03-06)
-[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.4...v2.9.5)
+## [v2.9.6](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.6) (2018-03-07)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.5...v2.9.6)
 
 **Closed issues:**
 
@@ -11,6 +11,8 @@
 
 - Replace \_checkPanoptesSession with \_getNewToken [\#86](https://github.com/zooniverse/panoptes-javascript-client/pull/86) ([eatyourgreens](https://github.com/eatyourgreens))
 
+## [v2.9.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.5) (2018-03-06)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.4...v2.9.5)
 
 ## [v2.9.4](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.4) (2018-02-27)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.3...v2.9.4)
