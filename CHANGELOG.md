@@ -1,7 +1,34 @@
 # Change Log
 
+## [Unreleased](https://github.com/zooniverse/panoptes-javascript-client/tree/HEAD)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.7...HEAD)
+
+**Merged pull requests:**
+
+- 2.9.7 [\#92](https://github.com/zooniverse/panoptes-javascript-client/pull/92) ([eatyourgreens](https://github.com/eatyourgreens))
+
+## [v2.9.7](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.7) (2018-05-09)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.6...v2.9.7)
+
+**Closed issues:**
+
+- OAuth.init\(\) no longer checks for an existing Panoptes session [\#90](https://github.com/zooniverse/panoptes-javascript-client/issues/90)
+
+**Merged pull requests:**
+
+- Use local storage for session tokens [\#91](https://github.com/zooniverse/panoptes-javascript-client/pull/91) ([eatyourgreens](https://github.com/eatyourgreens))
+- 2.9.6 [\#88](https://github.com/zooniverse/panoptes-javascript-client/pull/88) ([eatyourgreens](https://github.com/eatyourgreens))
+
 ## [v2.9.6](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.6) (2018-03-07)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.5...v2.9.6)
+
+**Merged pull requests:**
+
+- 2.9.5 [\#87](https://github.com/zooniverse/panoptes-javascript-client/pull/87) ([eatyourgreens](https://github.com/eatyourgreens))
+
+## [v2.9.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.5) (2018-03-06)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.4...v2.9.5)
 
 **Closed issues:**
 
@@ -10,42 +37,32 @@
 **Merged pull requests:**
 
 - Replace \_checkPanoptesSession with \_getNewToken [\#86](https://github.com/zooniverse/panoptes-javascript-client/pull/86) ([eatyourgreens](https://github.com/eatyourgreens))
-
-## [v2.9.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.5) (2018-03-06)
-[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.4...v2.9.5)
+- Various OAuth bug fixes [\#85](https://github.com/zooniverse/panoptes-javascript-client/pull/85) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.4](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.4) (2018-02-27)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.3...v2.9.4)
 
 **Merged pull requests:**
 
-- Various OAuth bug fixes [\#85](https://github.com/zooniverse/panoptes-javascript-client/pull/85) ([eatyourgreens](https://github.com/eatyourgreens))
+- Massive changelog update [\#83](https://github.com/zooniverse/panoptes-javascript-client/pull/83) ([eatyourgreens](https://github.com/eatyourgreens))
+- OAuth improvements [\#82](https://github.com/zooniverse/panoptes-javascript-client/pull/82) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.3) (2018-02-23)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.2...v2.9.3)
 
 **Merged pull requests:**
 
-- Massive changelog update [\#83](https://github.com/zooniverse/panoptes-javascript-client/pull/83) ([eatyourgreens](https://github.com/eatyourgreens))
-- OAuth improvements [\#82](https://github.com/zooniverse/panoptes-javascript-client/pull/82) ([eatyourgreens](https://github.com/eatyourgreens))
+- Add checkBearerToken\(\) to OAuth [\#80](https://github.com/zooniverse/panoptes-javascript-client/pull/80) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.2) (2018-02-13)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.1...v2.9.2)
 
 **Merged pull requests:**
 
-- Add checkBearerToken\(\) to OAuth [\#80](https://github.com/zooniverse/panoptes-javascript-client/pull/80) ([eatyourgreens](https://github.com/eatyourgreens))
+- 2.9.1 [\#78](https://github.com/zooniverse/panoptes-javascript-client/pull/78) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.1) (2018-02-01)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.0...v2.9.1)
-
-**Merged pull requests:**
-
-- 2.9.1 [\#78](https://github.com/zooniverse/panoptes-javascript-client/pull/78) ([eatyourgreens](https://github.com/eatyourgreens))
-- Remove array destructuring from parseUrl\(\) [\#77](https://github.com/zooniverse/panoptes-javascript-client/pull/77) ([eatyourgreens](https://github.com/eatyourgreens))
-
-## [v2.9.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.0) (2018-01-31)
-[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.8.1...v2.9.0)
 
 **Closed issues:**
 
@@ -53,7 +70,11 @@
 
 **Merged pull requests:**
 
+- Remove array destructuring from parseUrl\(\) [\#77](https://github.com/zooniverse/panoptes-javascript-client/pull/77) ([eatyourgreens](https://github.com/eatyourgreens))
 - Persist bearer token details across page reloads [\#75](https://github.com/zooniverse/panoptes-javascript-client/pull/75) ([eatyourgreens](https://github.com/eatyourgreens))
+
+## [v2.9.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.0) (2018-01-31)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.8.1...v2.9.0)
 
 ## [v2.8.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.8.1) (2018-01-24)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.8.0...v2.8.1)
