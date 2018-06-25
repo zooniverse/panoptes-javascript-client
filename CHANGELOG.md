@@ -1,8 +1,19 @@
 # Change Log
 
-## [Unreleased](https://github.com/zooniverse/panoptes-javascript-client/tree/HEAD)
+## [v2.10.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.10.0) (2018-06-25)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.8-0...v2.10.0)
 
-[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.7...HEAD)
+**Fixed bugs:**
+
+- Unnecessary save to localstorage [\#33](https://github.com/zooniverse/panoptes-javascript-client/issues/33)
+
+**Merged pull requests:**
+
+- Audit packages [\#94](https://github.com/zooniverse/panoptes-javascript-client/pull/94) ([eatyourgreens](https://github.com/eatyourgreens))
+- Update changelog [\#93](https://github.com/zooniverse/panoptes-javascript-client/pull/93) ([eatyourgreens](https://github.com/eatyourgreens))
+
+## [v2.9.8-0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.8-0) (2018-06-22)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.7...v2.9.8-0)
 
 **Merged pull requests:**
 
