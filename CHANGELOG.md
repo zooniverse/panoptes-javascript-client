@@ -1,5 +1,25 @@
 # Change Log
 
+## [v2.11.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.11.1) (2018-08-07)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.11.0...v2.11.1)
+
+**Closed issues:**
+
+- Client crashes if response.body is null [\#99](https://github.com/zooniverse/panoptes-javascript-client/issues/99)
+
+**Merged pull requests:**
+
+- Return an error for empty response body [\#100](https://github.com/zooniverse/panoptes-javascript-client/pull/100) ([eatyourgreens](https://github.com/eatyourgreens))
+- 2.11.0 [\#98](https://github.com/zooniverse/panoptes-javascript-client/pull/98) ([srallen](https://github.com/srallen))
+
+## [v2.11.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.11.0) (2018-06-30)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.10.0...v2.11.0)
+
+**Merged pull requests:**
+
+- Optional redirect [\#97](https://github.com/zooniverse/panoptes-javascript-client/pull/97) ([srallen](https://github.com/srallen))
+- V2.10 [\#95](https://github.com/zooniverse/panoptes-javascript-client/pull/95) ([eatyourgreens](https://github.com/eatyourgreens))
+
 ## [v2.10.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.10.0) (2018-06-25)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.8-0...v2.10.0)
 
