@@ -1,5 +1,15 @@
 # Change Log
 
+## [v2.11.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.11.2) (2018-08-14)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.11.1...v2.11.2)
+
+**Merged pull requests:**
+
+- Doorkeeper 4.4.1 compatibility [\#103](https://github.com/zooniverse/panoptes-javascript-client/pull/103) ([shaunanoordin](https://github.com/shaunanoordin))
+- Update dev dependencies [\#102](https://github.com/zooniverse/panoptes-javascript-client/pull/102) ([eatyourgreens](https://github.com/eatyourgreens))
+- Version 2.11.1 [\#101](https://github.com/zooniverse/panoptes-javascript-client/pull/101) ([eatyourgreens](https://github.com/eatyourgreens))
+- add staging / dev event stats server [\#96](https://github.com/zooniverse/panoptes-javascript-client/pull/96) ([camallen](https://github.com/camallen))
+
 ## [v2.11.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.11.1) (2018-08-07)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.11.0...v2.11.1)
 
