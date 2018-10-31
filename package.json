@@ -15,7 +15,6 @@
     "tap-spec": "^5.0.0"
   },
   "scripts": {
-    "test": "node ./test/index.js | tap-spec",
-    "test-stats": "NODE_ENV=production node ./test/stats.js | tap-spec"
+    "test": "node ./test/index.js | tap-spec"
   }
 }
