@@ -11,14 +11,10 @@
     "sugar-client": "^1.0.1"
   },
   "devDependencies": {
-    "beefy": "^2.1.6",
     "blue-tape": "~0.1.11",
-    "jscs": "^3.0.7",
     "tap-spec": "^5.0.0"
   },
   "scripts": {
-    "lint": "jscs lib test",
-    "start-oauth-example": "beefy ./examples/oauth.js",
     "test": "node ./test/index.js | tap-spec",
     "test-stats": "NODE_ENV=production node ./test/stats.js | tap-spec"
   }
