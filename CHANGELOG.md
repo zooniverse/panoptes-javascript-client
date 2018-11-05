@@ -1,5 +1,13 @@
 # Change Log
 
+## [v2.12.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.0) (2018-11-05)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.11.2...v2.12.0)
+
+**Merged pull requests:**
+
+- Remove vulnerable packages [\#106](https://github.com/zooniverse/panoptes-javascript-client/pull/106) ([mcbouslog](https://github.com/mcbouslog))
+- Update stats-client for user_id query [\#105](https://github.com/zooniverse/panoptes-javascript-client/pull/105) ([mcbouslog](https://github.com/mcbouslog))
+
 ## [v2.11.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.11.2) (2018-08-14)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.11.1...v2.11.2)
 
