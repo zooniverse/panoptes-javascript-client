@@ -1,1 +1,2 @@
 require('./auth');
+require('./stats');
