@@ -1,12 +1,24 @@
 # Change Log
 
-## [v2.12.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.0) (2018-11-05)
+## [v2.12.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.1) (2019-03-29)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.12.0...v2.12.1)
+
+**Merged pull requests:**
+
+- json-api-client 4.0.1 [\#111](https://github.com/zooniverse/panoptes-javascript-client/pull/111) ([eatyourgreens](https://github.com/eatyourgreens))
+- \[Security\] Bump lodash from 4.17.10 to 4.17.11 [\#110](https://github.com/zooniverse/panoptes-javascript-client/pull/110) ([dependabot[bot]](https://github.com/apps/dependabot))
+- \[Security\] Bump extend from 3.0.1 to 3.0.2 [\#109](https://github.com/zooniverse/panoptes-javascript-client/pull/109) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump blue-tape from 0.1.11 to 1.0.0 [\#108](https://github.com/zooniverse/panoptes-javascript-client/pull/108) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [v2.12.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.0) (2018-11-06)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.11.2...v2.12.0)
 
 **Merged pull requests:**
 
+- v2.12.0 [\#107](https://github.com/zooniverse/panoptes-javascript-client/pull/107) ([mcbouslog](https://github.com/mcbouslog))
 - Remove vulnerable packages [\#106](https://github.com/zooniverse/panoptes-javascript-client/pull/106) ([mcbouslog](https://github.com/mcbouslog))
-- Update stats-client for user_id query [\#105](https://github.com/zooniverse/panoptes-javascript-client/pull/105) ([mcbouslog](https://github.com/mcbouslog))
+- Update stats-client for user\_id query [\#105](https://github.com/zooniverse/panoptes-javascript-client/pull/105) ([mcbouslog](https://github.com/mcbouslog))
+- v2.11.2 [\#104](https://github.com/zooniverse/panoptes-javascript-client/pull/104) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.11.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.11.2) (2018-08-14)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.11.1...v2.11.2)
