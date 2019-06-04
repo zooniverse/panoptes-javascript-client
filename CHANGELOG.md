@@ -1,14 +1,22 @@
 # Change Log
 
+## [v2.12.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.2) (2019-06-04)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.12.1...v2.12.2)
+
+**Merged pull requests:**
+
+- update JSON-API client [\#113](https://github.com/zooniverse/panoptes-javascript-client/pull/113) ([eatyourgreens](https://github.com/eatyourgreens))
+- 2.12.1 [\#112](https://github.com/zooniverse/panoptes-javascript-client/pull/112) ([eatyourgreens](https://github.com/eatyourgreens))
+
 ## [v2.12.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.1) (2019-03-29)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.12.0...v2.12.1)
 
 **Merged pull requests:**
 
 - json-api-client 4.0.1 [\#111](https://github.com/zooniverse/panoptes-javascript-client/pull/111) ([eatyourgreens](https://github.com/eatyourgreens))
-- \[Security\] Bump lodash from 4.17.10 to 4.17.11 [\#110](https://github.com/zooniverse/panoptes-javascript-client/pull/110) ([dependabot[bot]](https://github.com/apps/dependabot))
-- \[Security\] Bump extend from 3.0.1 to 3.0.2 [\#109](https://github.com/zooniverse/panoptes-javascript-client/pull/109) ([dependabot[bot]](https://github.com/apps/dependabot))
-- Bump blue-tape from 0.1.11 to 1.0.0 [\#108](https://github.com/zooniverse/panoptes-javascript-client/pull/108) ([dependabot[bot]](https://github.com/apps/dependabot))
+- \[Security\] Bump lodash from 4.17.10 to 4.17.11 [\#110](https://github.com/zooniverse/panoptes-javascript-client/pull/110) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- \[Security\] Bump extend from 3.0.1 to 3.0.2 [\#109](https://github.com/zooniverse/panoptes-javascript-client/pull/109) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump blue-tape from 0.1.11 to 1.0.0 [\#108](https://github.com/zooniverse/panoptes-javascript-client/pull/108) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 ## [v2.12.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.0) (2018-11-06)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.11.2...v2.12.0)
@@ -285,7 +293,6 @@
 
 **Merged pull requests:**
 
-- Alternate fix for `env` variable in lib/config.js [\#23](https://github.com/zooniverse/panoptes-javascript-client/pull/23) ([shaunanoordin](https://github.com/shaunanoordin))
 - Refactor 2 - WIP [\#20](https://github.com/zooniverse/panoptes-javascript-client/pull/20) ([rogerhutchings](https://github.com/rogerhutchings))
 - Match bower.json version with package.json [\#16](https://github.com/zooniverse/panoptes-javascript-client/pull/16) ([rogerhutchings](https://github.com/rogerhutchings))
 
