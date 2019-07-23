@@ -1,5 +1,14 @@
 # Change Log
 
+## [v2.12.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.3) (2019-07-22)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.12.2...v2.12.3)
+
+**Merged pull requests:**
+
+- v2.12.3: Security patch [\#117](https://github.com/zooniverse/panoptes-javascript-client/pull/117) ([eatyourgreens](https://github.com/eatyourgreens))
+- \[Security\] Bump lodash from 4.17.11 to 4.17.15 [\#116](https://github.com/zooniverse/panoptes-javascript-client/pull/116) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- 2.12.2 [\#114](https://github.com/zooniverse/panoptes-javascript-client/pull/114) ([eatyourgreens](https://github.com/eatyourgreens))
+
 ## [v2.12.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.2) (2019-06-04)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.12.1...v2.12.2)
 
@@ -293,6 +302,7 @@
 
 **Merged pull requests:**
 
+- Alternate fix for `env` variable in lib/config.js [\#23](https://github.com/zooniverse/panoptes-javascript-client/pull/23) ([shaunanoordin](https://github.com/shaunanoordin))
 - Refactor 2 - WIP [\#20](https://github.com/zooniverse/panoptes-javascript-client/pull/20) ([rogerhutchings](https://github.com/rogerhutchings))
 - Match bower.json version with package.json [\#16](https://github.com/zooniverse/panoptes-javascript-client/pull/16) ([rogerhutchings](https://github.com/rogerhutchings))
 
