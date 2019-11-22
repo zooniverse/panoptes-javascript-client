@@ -16,7 +16,7 @@ test('Checking the current user initially fails', function(t) {
     });
 });
 
-test.only('Registering an account with no data fails', function(t) {
+test('Registering an account with no data fails', function(t) {
   var BLANK_REGISTRATION = {};
   return auth.register(BLANK_REGISTRATION)
     .then(function() {
