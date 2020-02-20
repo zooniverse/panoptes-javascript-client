@@ -1,5 +1,19 @@
 # Change Log
 
+## [v3.1.0](https://github.com/zooniverse/panoptes-javascript-client/releases/tag/v3.1.0) (2020-02-20)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.0.0...v3.1.0)
+
+**Merged pull requests:**
+
+- Change default oAuth Host and allow config [\#126](https://github.com/zooniverse/panoptes-javascript-client/pull/126) ([shaunanoordin](https://github.com/shaunanoordin))
+
+## [v3.0.0](https://github.com/zooniverse/panoptes-javascript-client/releases/tag/v3.0.0) (2019-12-11)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.12.3...v3.0.0)
+
+**Merged pull requests:**
+
+- Remove tests we don't trust [\#124](https://github.com/zooniverse/panoptes-javascript-client/pull/124) ([srallen](https://github.com/srallen))
+
 ## [v2.12.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.3) (2019-07-22)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.12.2...v2.12.3)
 
