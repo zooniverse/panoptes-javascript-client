@@ -1,5 +1,12 @@
 # Change Log
 
+## [v3.2.0](https://github.com/zooniverse/panoptes-javascript-client/releases/tag/v3.2.0)(2020-03-2)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.1.0...v3.2.0)
+
+**Merged pull requests:**
+
+- Check for Custom ENV Variable from CRA [\#128](https://github.com/zooniverse/panoptes-javascript-client/pull/128) ([wgranger](https://github.com/wgranger))
+
 ## [v3.1.0](https://github.com/zooniverse/panoptes-javascript-client/releases/tag/v3.1.0) (2020-02-20)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.0.0...v3.1.0)
 
