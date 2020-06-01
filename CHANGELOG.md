@@ -1,5 +1,12 @@
 # Change Log
 
+## [v3.2.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.2.2) (2020-06-01)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.2.1...v3.2.2)
+
+**Merged pull requests:**
+
+- Hide private data from exports [\#133](https://github.com/zooniverse/panoptes-javascript-client/pull/133) ([eatyourgreens](https://github.com/eatyourgreens))
+
 ## [v3.2.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.2.1) (2020-03-16)
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.2.0...v3.2.1)
 
