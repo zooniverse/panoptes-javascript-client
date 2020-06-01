@@ -1,7 +1,7 @@
 # Change Log
 
-## [v3.2.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.2.2) (2020-06-01)
-[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.2.1...v3.2.2)
+## [v3.3.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.3.0) (2020-06-01)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.2.1...v3.3.0)
 
 **Merged pull requests:**
 
