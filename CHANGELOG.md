@@ -1,22 +1,41 @@
-# Change Log
+# Changelog
+
+## [Unreleased](https://github.com/zooniverse/panoptes-javascript-client/tree/HEAD)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.3.0...HEAD)
+
+**Merged pull requests:**
+
+- setup GH security scanning [\#136](https://github.com/zooniverse/panoptes-javascript-client/pull/136) ([camallen](https://github.com/camallen))
+- Minor bump [\#134](https://github.com/zooniverse/panoptes-javascript-client/pull/134) ([wgranger](https://github.com/wgranger))
 
 ## [v3.3.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.3.0) (2020-06-01)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.2.1...v3.3.0)
 
+**Security fixes:**
+
+- Auth clients: Hide private data from exports [\#133](https://github.com/zooniverse/panoptes-javascript-client/pull/133) ([eatyourgreens](https://github.com/eatyourgreens))
+
 **Merged pull requests:**
 
-- Hide private data from exports [\#133](https://github.com/zooniverse/panoptes-javascript-client/pull/133) ([eatyourgreens](https://github.com/eatyourgreens))
+- version 3.2.1 [\#132](https://github.com/zooniverse/panoptes-javascript-client/pull/132) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v3.2.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.2.1) (2020-03-16)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.2.0...v3.2.1)
 
-**Merged pull requests:**
+**Security fixes:**
 
 - update json-api-client to 5.0.1 [\#131](https://github.com/zooniverse/panoptes-javascript-client/pull/131) ([eatyourgreens](https://github.com/eatyourgreens))
 - \[Security\] Bump minimist from 1.2.0 to 1.2.5 [\#130](https://github.com/zooniverse/panoptes-javascript-client/pull/130) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+
+**Merged pull requests:**
+
 - Minor version 3.2.0 [\#129](https://github.com/zooniverse/panoptes-javascript-client/pull/129) ([wgranger](https://github.com/wgranger))
 
 ## [v3.2.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.2.0) (2020-03-02)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.1.0...v3.2.0)
 
 **Merged pull requests:**
@@ -25,6 +44,7 @@
 - Minor version 3.1.0 [\#127](https://github.com/zooniverse/panoptes-javascript-client/pull/127) ([shaunanoordin](https://github.com/shaunanoordin))
 
 ## [v3.1.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.1.0) (2020-02-20)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.0.0...v3.1.0)
 
 **Merged pull requests:**
@@ -33,6 +53,7 @@
 - Major version 3 [\#125](https://github.com/zooniverse/panoptes-javascript-client/pull/125) ([srallen](https://github.com/srallen))
 
 ## [v3.0.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.0.0) (2019-12-11)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.0.0-rc.0...v3.0.0)
 
 **Closed issues:**
@@ -45,6 +66,7 @@
 - 3.0.0-rc.0 [\#122](https://github.com/zooniverse/panoptes-javascript-client/pull/122) ([srallen](https://github.com/srallen))
 
 ## [v3.0.0-rc.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.0.0-rc.0) (2019-11-22)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.13.0...v3.0.0-rc.0)
 
 **Merged pull requests:**
@@ -53,6 +75,7 @@
 - 2.13.0 [\#120](https://github.com/zooniverse/panoptes-javascript-client/pull/120) ([srallen](https://github.com/srallen))
 
 ## [v2.13.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.13.0) (2019-10-16)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.12.3...v2.13.0)
 
 **Merged pull requests:**
@@ -62,14 +85,19 @@
 - v2.12.3: Security patch [\#117](https://github.com/zooniverse/panoptes-javascript-client/pull/117) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.12.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.3) (2019-07-22)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.12.2...v2.12.3)
+
+**Security fixes:**
+
+- \[Security\] Bump lodash from 4.17.11 to 4.17.15 [\#116](https://github.com/zooniverse/panoptes-javascript-client/pull/116) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 **Merged pull requests:**
 
-- \[Security\] Bump lodash from 4.17.11 to 4.17.15 [\#116](https://github.com/zooniverse/panoptes-javascript-client/pull/116) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - 2.12.2 [\#114](https://github.com/zooniverse/panoptes-javascript-client/pull/114) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.12.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.2) (2019-06-04)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.12.1...v2.12.2)
 
 **Merged pull requests:**
@@ -78,16 +106,21 @@
 - 2.12.1 [\#112](https://github.com/zooniverse/panoptes-javascript-client/pull/112) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.12.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.1) (2019-03-29)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.12.0...v2.12.1)
+
+**Security fixes:**
+
+- \[Security\] Bump lodash from 4.17.10 to 4.17.11 [\#110](https://github.com/zooniverse/panoptes-javascript-client/pull/110) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- \[Security\] Bump extend from 3.0.1 to 3.0.2 [\#109](https://github.com/zooniverse/panoptes-javascript-client/pull/109) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 **Merged pull requests:**
 
 - json-api-client 4.0.1 [\#111](https://github.com/zooniverse/panoptes-javascript-client/pull/111) ([eatyourgreens](https://github.com/eatyourgreens))
-- \[Security\] Bump lodash from 4.17.10 to 4.17.11 [\#110](https://github.com/zooniverse/panoptes-javascript-client/pull/110) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
-- \[Security\] Bump extend from 3.0.1 to 3.0.2 [\#109](https://github.com/zooniverse/panoptes-javascript-client/pull/109) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump blue-tape from 0.1.11 to 1.0.0 [\#108](https://github.com/zooniverse/panoptes-javascript-client/pull/108) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 ## [v2.12.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.12.0) (2018-11-06)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.11.2...v2.12.0)
 
 **Merged pull requests:**
@@ -98,6 +131,7 @@
 - v2.11.2 [\#104](https://github.com/zooniverse/panoptes-javascript-client/pull/104) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.11.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.11.2) (2018-08-14)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.11.1...v2.11.2)
 
 **Merged pull requests:**
@@ -108,6 +142,7 @@
 - add staging / dev event stats server [\#96](https://github.com/zooniverse/panoptes-javascript-client/pull/96) ([camallen](https://github.com/camallen))
 
 ## [v2.11.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.11.1) (2018-08-07)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.11.0...v2.11.1)
 
 **Closed issues:**
@@ -120,6 +155,7 @@
 - 2.11.0 [\#98](https://github.com/zooniverse/panoptes-javascript-client/pull/98) ([srallen](https://github.com/srallen))
 
 ## [v2.11.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.11.0) (2018-06-30)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.10.0...v2.11.0)
 
 **Merged pull requests:**
@@ -128,6 +164,7 @@
 - V2.10 [\#95](https://github.com/zooniverse/panoptes-javascript-client/pull/95) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.10.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.10.0) (2018-06-25)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.8-0...v2.10.0)
 
 **Fixed bugs:**
@@ -140,6 +177,7 @@
 - Update changelog [\#93](https://github.com/zooniverse/panoptes-javascript-client/pull/93) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.8-0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.8-0) (2018-06-22)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.7...v2.9.8-0)
 
 **Merged pull requests:**
@@ -147,6 +185,7 @@
 - 2.9.7 [\#92](https://github.com/zooniverse/panoptes-javascript-client/pull/92) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.7](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.7) (2018-05-09)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.6...v2.9.7)
 
 **Closed issues:**
@@ -159,13 +198,16 @@
 - 2.9.6 [\#88](https://github.com/zooniverse/panoptes-javascript-client/pull/88) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.6](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.6) (2018-03-07)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.5...v2.9.6)
 
 **Merged pull requests:**
 
 - 2.9.5 [\#87](https://github.com/zooniverse/panoptes-javascript-client/pull/87) ([eatyourgreens](https://github.com/eatyourgreens))
+- Replace \_checkPanoptesSession with \_getNewToken [\#86](https://github.com/zooniverse/panoptes-javascript-client/pull/86) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.5) (2018-03-06)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.4...v2.9.5)
 
 **Closed issues:**
@@ -174,10 +216,10 @@
 
 **Merged pull requests:**
 
-- Replace \_checkPanoptesSession with \_getNewToken [\#86](https://github.com/zooniverse/panoptes-javascript-client/pull/86) ([eatyourgreens](https://github.com/eatyourgreens))
 - Various OAuth bug fixes [\#85](https://github.com/zooniverse/panoptes-javascript-client/pull/85) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.4](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.4) (2018-02-27)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.3...v2.9.4)
 
 **Merged pull requests:**
@@ -186,6 +228,7 @@
 - OAuth improvements [\#82](https://github.com/zooniverse/panoptes-javascript-client/pull/82) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.3) (2018-02-23)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.2...v2.9.3)
 
 **Merged pull requests:**
@@ -193,6 +236,7 @@
 - Add checkBearerToken\(\) to OAuth [\#80](https://github.com/zooniverse/panoptes-javascript-client/pull/80) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.2) (2018-02-13)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.1...v2.9.2)
 
 **Merged pull requests:**
@@ -200,6 +244,7 @@
 - 2.9.1 [\#78](https://github.com/zooniverse/panoptes-javascript-client/pull/78) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.1) (2018-02-01)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.9.0...v2.9.1)
 
 **Closed issues:**
@@ -212,9 +257,11 @@
 - Persist bearer token details across page reloads [\#75](https://github.com/zooniverse/panoptes-javascript-client/pull/75) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.9.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.9.0) (2018-01-31)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.8.1...v2.9.0)
 
 ## [v2.8.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.8.1) (2018-01-24)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.8.0...v2.8.1)
 
 **Merged pull requests:**
@@ -224,6 +271,7 @@
 - 2.8.0 [\#71](https://github.com/zooniverse/panoptes-javascript-client/pull/71) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.8.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.8.0) (2017-11-13)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.7.2...v2.8.0)
 
 **Closed issues:**
@@ -233,9 +281,9 @@
 **Merged pull requests:**
 
 - json-api-client 3.3 [\#70](https://github.com/zooniverse/panoptes-javascript-client/pull/70) ([eatyourgreens](https://github.com/eatyourgreens))
-- Setup 3.x.x tooling [\#67](https://github.com/zooniverse/panoptes-javascript-client/pull/67) ([rogerhutchings](https://github.com/rogerhutchings))
 
 ## [v2.7.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.7.2) (2017-05-31)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.7.1...v2.7.2)
 
 **Implemented enhancements:**
@@ -251,9 +299,11 @@
 - Check for response.body for 500 errors [\#65](https://github.com/zooniverse/panoptes-javascript-client/pull/65) ([srallen](https://github.com/srallen))
 
 ## [v2.7.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.7.1) (2017-03-31)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.7.0...v2.7.1)
 
 ## [v2.7.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.7.0) (2017-03-28)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.6.1...v2.7.0)
 
 **Merged pull requests:**
@@ -261,6 +311,7 @@
 - Add http\_cache=true to all requests [\#64](https://github.com/zooniverse/panoptes-javascript-client/pull/64) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.6.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.6.1) (2017-03-22)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.6.0...v2.6.1)
 
 **Fixed bugs:**
@@ -268,6 +319,7 @@
 - Client doesn't pass back HTTP response status codes with errors [\#25](https://github.com/zooniverse/panoptes-javascript-client/issues/25)
 
 ## [v2.6.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.6.0) (2017-03-22)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.5.2...v2.6.0)
 
 **Fixed bugs:**
@@ -285,6 +337,7 @@
 - Add HTTP status to errors [\#63](https://github.com/zooniverse/panoptes-javascript-client/pull/63) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v2.5.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.5.2) (2016-07-06)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.5.1...v2.5.2)
 
 **Merged pull requests:**
@@ -292,6 +345,7 @@
 - Fix regex to correctly match new token rules [\#55](https://github.com/zooniverse/panoptes-javascript-client/pull/55) ([rogerhutchings](https://github.com/rogerhutchings))
 
 ## [v2.5.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.5.1) (2016-05-18)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.2.1...v2.5.1)
 
 **Implemented enhancements:**
@@ -306,19 +360,17 @@
 
 - Only make one token refresh request [\#52](https://github.com/zooniverse/panoptes-javascript-client/pull/52) ([brian-c](https://github.com/brian-c))
 - Update readme [\#50](https://github.com/zooniverse/panoptes-javascript-client/pull/50) ([eatyourgreens](https://github.com/eatyourgreens))
-- Update README.md [\#49](https://github.com/zooniverse/panoptes-javascript-client/pull/49) ([simoneduca](https://github.com/simoneduca))
 - Updated readme [\#48](https://github.com/zooniverse/panoptes-javascript-client/pull/48) ([srallen](https://github.com/srallen))
 - Auth module does auth wth the normal host [\#46](https://github.com/zooniverse/panoptes-javascript-client/pull/46) ([brian-c](https://github.com/brian-c))
 - Auto refresh bearer token [\#45](https://github.com/zooniverse/panoptes-javascript-client/pull/45) ([brian-c](https://github.com/brian-c))
 - Tweak stats client for consistency, stub out a test [\#44](https://github.com/zooniverse/panoptes-javascript-client/pull/44) ([brian-c](https://github.com/brian-c))
-- Update require notes [\#43](https://github.com/zooniverse/panoptes-javascript-client/pull/43) ([srallen](https://github.com/srallen))
 - Increase TOKEN\_EXPIRATION\_ALLOWANCE to prevent token expiration [\#42](https://github.com/zooniverse/panoptes-javascript-client/pull/42) ([parrish](https://github.com/parrish))
-- Add oauth to the list of modules [\#40](https://github.com/zooniverse/panoptes-javascript-client/pull/40) ([simoneduca](https://github.com/simoneduca))
 - Add a simple statsClient object [\#39](https://github.com/zooniverse/panoptes-javascript-client/pull/39) ([eatyourgreens](https://github.com/eatyourgreens))
 - fix broken entry point in package.json, add development strings [\#38](https://github.com/zooniverse/panoptes-javascript-client/pull/38) ([amy-langley](https://github.com/amy-langley))
 - Fix typo in error handling [\#34](https://github.com/zooniverse/panoptes-javascript-client/pull/34) ([itsravenous](https://github.com/itsravenous))
 
 ## [v2.2.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.2.1) (2016-04-05)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.2.0...v2.2.1)
 
 **Merged pull requests:**
@@ -328,6 +380,7 @@
 - add stats sever [\#29](https://github.com/zooniverse/panoptes-javascript-client/pull/29) ([CKrawczyk](https://github.com/CKrawczyk))
 
 ## [v2.2.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.2.0) (2016-03-21)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.1.0...v2.2.0)
 
 **Closed issues:**
@@ -340,6 +393,7 @@
 - Add panoptes.zooniverse.org for OAuth [\#27](https://github.com/zooniverse/panoptes-javascript-client/pull/27) ([simoneduca](https://github.com/simoneduca))
 
 ## [v2.1.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.1.0) (2016-02-29)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.0.2...v2.1.0)
 
 **Merged pull requests:**
@@ -347,12 +401,15 @@
 - Another go at an OAuth module [\#24](https://github.com/zooniverse/panoptes-javascript-client/pull/24) ([rogerhutchings](https://github.com/rogerhutchings))
 
 ## [v2.0.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.0.2) (2016-02-12)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.0.1...v2.0.2)
 
 ## [v2.0.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.0.1) (2016-02-05)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v2.0.0...v2.0.1)
 
 ## [v2.0.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v2.0.0) (2016-02-05)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v0.1.2...v2.0.0)
 
 **Closed issues:**
@@ -367,6 +424,7 @@
 - Match bower.json version with package.json [\#16](https://github.com/zooniverse/panoptes-javascript-client/pull/16) ([rogerhutchings](https://github.com/rogerhutchings))
 
 ## [v0.1.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v0.1.2) (2015-07-04)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v0.1.1...v0.1.2)
 
 **Closed issues:**
@@ -381,12 +439,17 @@
 - Set license to Apache 2 [\#1](https://github.com/zooniverse/panoptes-javascript-client/pull/1) ([rogerhutchings](https://github.com/rogerhutchings))
 
 ## [v0.1.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v0.1.1) (2015-05-15)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v0.1.0...v0.1.1)
 
 ## [v0.1.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v0.1.0) (2015-05-11)
+
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v0.0.1...v0.1.0)
 
 ## [v0.0.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v0.0.1) (2015-04-18)
 
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/f5e0a99361f6dc7cd76c73eb73d68ef25a272876...v0.0.1)
 
-\* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
+
+
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
