@@ -1,11 +1,11 @@
 # Changelog
 
-## [Unreleased](https://github.com/zooniverse/panoptes-javascript-client/tree/HEAD)
+## [v3.3.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.3.1) (2020-06-01)
 
-[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.3.0...HEAD)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.3.1...v3.3.0)
 
 **Merged pull requests:**
-
+- increase token expiration allowance [\#140](https://github.com/zooniverse/panoptes-javascript-client/pull/140)
 - setup GH security scanning [\#136](https://github.com/zooniverse/panoptes-javascript-client/pull/136) ([camallen](https://github.com/camallen))
 - Minor bump [\#134](https://github.com/zooniverse/panoptes-javascript-client/pull/134) ([wgranger](https://github.com/wgranger))
 
