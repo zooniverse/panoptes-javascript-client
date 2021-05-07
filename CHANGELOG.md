@@ -1,6 +1,16 @@
 # Changelog
 
-## [v3.3.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.3.1) (2020-06-01)
+## [v3.3.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.3.2) (2021-05-07)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.3.2...v3.3.1)
+
+**Merged pull requests:**
+- Sugar client: fix Panoptes authentication
+[\#142](https://github.com/zooniverse/panoptes-javascript-client/pull/142)
+- [Security] Bump lodash from 4.17.19 to 4.17.21
+[\#143](https://github.com/zooniverse/panoptes-javascript-client/pull/143)
+
+## [v3.3.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.3.1) (2021-05-06)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.3.1...v3.3.0)
 
