@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.3.3
+
+Sugar client updated to decaffeinated version. 
+
 ## [v3.3.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.3.2) (2021-05-07)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.3.2...v3.3.1)
