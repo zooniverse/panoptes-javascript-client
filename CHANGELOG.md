@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased
+## v3.3.4
 
-- Fix undefined token in `auth.checkBearerToken()` after a token refresh.
+- Fix undefined token in `auth.checkBearerToken()` after a token refresh. [\#149](https://github.com/zooniverse/panoptes-javascript-client/pull/149)
   
 ## v3.3.3
 
