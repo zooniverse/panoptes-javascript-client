@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Fix undefined token in `auth.checkBearerToken()` after a token refresh.
+  
 ## v3.3.3
 
 Sugar client updated to decaffeinated version. 
