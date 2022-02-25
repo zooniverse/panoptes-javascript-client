@@ -1,12 +1,20 @@
 # Changelog
 
+## [v3.3.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.3.5) (2022-02-25)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.3.5...v3.3.4)
+
+**Merged pull requests:**
+- Sugar client updated to v2.0.0
+[\#151](https://github.com/zooniverse/panoptes-javascript-client/pull/151)
+
 ## v3.3.4
 
 - Fix undefined token in `auth.checkBearerToken()` after a token refresh. [\#149](https://github.com/zooniverse/panoptes-javascript-client/pull/149)
-  
+
 ## v3.3.3
 
-Sugar client updated to decaffeinated version. 
+Sugar client updated to decaffeinated version.
 
 ## [v3.3.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.3.2) (2021-05-07)
 
