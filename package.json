@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "json-api-client": "~5.0.0",
-    "local-storage": "^1.4.2",
+    "local-storage": "^2.0.0",
     "sugar-client": "^2.0.0"
   },
   "devDependencies": {
