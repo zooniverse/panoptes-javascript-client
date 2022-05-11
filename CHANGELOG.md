@@ -1,5 +1,15 @@
 # Changelog
 
+## [v3.4.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.4.0) (2022-05-09)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.4.0...v3.3.5)
+
+**Merged pull requests:**
+- Bump json-api-client from 5.0.1 to 5.1.0
+[\#158](https://github.com/zooniverse/panoptes-javascript-client/pull/158)
+- Bump local-storage from 1.4.2 to 2.0.0
+[\#157](https://github.com/zooniverse/panoptes-javascript-client/pull/157)
+
 ## [v3.3.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.3.5) (2022-02-25)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.3.5...v3.3.4)
