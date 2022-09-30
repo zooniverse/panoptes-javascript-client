@@ -5,9 +5,9 @@
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.1.0...v4.0.0)
 
 **Merged pull requests:**
-- add CI system to run what tests there are (#167)
+- add CI system to run what tests there are
 [\#167](https://github.com/zooniverse/panoptes-javascript-client/pull/167)
-- remove *FromBrowser config directives (#166)
+- remove *FromBrowser config directives
 [\#166](https://github.com/zooniverse/panoptes-javascript-client/pull/166)
 - Bump json-api-client from 6.0.0 to 6.0.1
 [\#165](https://github.com/zooniverse/panoptes-javascript-client/pull/165)
