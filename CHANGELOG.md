@@ -1,6 +1,6 @@
 # Changelog
 
-## [v4.0.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.0.1) (2022-09-30)
+## [v4.1.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.1.0) (2022-09-30)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.1.0...v4.0.0)
 
