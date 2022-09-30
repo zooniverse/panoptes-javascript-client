@@ -11,8 +11,6 @@
 [\#166](https://github.com/zooniverse/panoptes-javascript-client/pull/166)
 - Bump json-api-client from 6.0.0 to 6.0.1
 [\#165](https://github.com/zooniverse/panoptes-javascript-client/pull/165)
-- Upgrade superagent to 8.0.0. Drop IE support.
-[\#162](https://github.com/zooniverse/panoptes-javascript-client/pull/162)
 
 ## [v4.0.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.0.0) (2022-06-30)
 
