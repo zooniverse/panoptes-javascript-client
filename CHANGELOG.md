@@ -1,5 +1,13 @@
 # Changelog
 
+## [v4.2.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.0) (2022-10-12)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.1.1...v4.2.0)
+
+**Merged pull requests:**
+- Reject the returned promise on error
+[\#164](https://github.com/zooniverse/panoptes-javascript-client/pull/164)
+
 ## [v4.1.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.1.1) (2022-10-03)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.1.0...v4.1.1)
