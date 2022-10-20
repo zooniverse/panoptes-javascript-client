@@ -1,8 +1,44 @@
 # Changelog
 
+## [v4.2.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.0) (2022-10-12)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.1.1...v4.2.0)
+
+**Merged pull requests:**
+- Reject the returned promise on error
+[\#164](https://github.com/zooniverse/panoptes-javascript-client/pull/164)
+
+## [v4.1.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.1.1) (2022-10-03)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.1.0...v4.1.1)
+
+**Merged pull requests:**
+- Bump json-api-client from 6.0.1 to 6.0.2
+[\#169](https://github.com/zooniverse/panoptes-javascript-client/pull/169)
+
+## [v4.1.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.1.0) (2022-09-30)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.0.0...v4.1.0)
+
+**Merged pull requests:**
+- add CI system to run what tests there are
+[\#167](https://github.com/zooniverse/panoptes-javascript-client/pull/167)
+- [Security] remove *FromBrowser config directives
+[\#166](https://github.com/zooniverse/panoptes-javascript-client/pull/166)
+- Bump json-api-client from 6.0.0 to 6.0.1
+[\#165](https://github.com/zooniverse/panoptes-javascript-client/pull/165)
+
+## [v4.0.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.0.0) (2022-06-30)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.4.1...v4.0.0)
+
+**Merged pull requests:**
+- Upgrade superagent to 8.0.0. Drop IE support.
+[\#162](https://github.com/zooniverse/panoptes-javascript-client/pull/162)
+
 ## [v3.4.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v3.4.0) (2022-05-09)
 
-[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.4.0...v3.3.5)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v3.4.1...v3.4.0)
 
 **Merged pull requests:**
 - Bump json-api-client from 5.1.0 to 5.1.1
