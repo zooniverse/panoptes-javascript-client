@@ -1,5 +1,16 @@
 # Changelog
 
+## [v4.2.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.1) (2022-10-25)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.0...v4.2.1)
+
+**Security:**
+- Bump minimatch to 3.1.2.
+
+**Merged pull requests:**
+- Bump json-api-client from 6.0.2 to 6.0.3
+[\#169](https://github.com/zooniverse/panoptes-javascript-client/pull/173)
+
 ## [v4.2.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.0) (2022-10-12)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.1.1...v4.2.0)
