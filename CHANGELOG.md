@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/zooniverse/panoptes-javascript-client/tree/master) (2022-11-01)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.1...master)
+
+**Merged pull requests:**
+- Convert error responses to Error objects
+[\#175](https://github.com/zooniverse/panoptes-javascript-client/pull/175)
+
 ## [v4.2.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.1) (2022-10-25)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.0...v4.2.1)
@@ -9,7 +17,7 @@
 
 **Merged pull requests:**
 - Bump json-api-client from 6.0.2 to 6.0.3
-[\#169](https://github.com/zooniverse/panoptes-javascript-client/pull/173)
+[\#173](https://github.com/zooniverse/panoptes-javascript-client/pull/173)
 
 ## [v4.2.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.0) (2022-10-12)
 
