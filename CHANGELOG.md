@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/zooniverse/panoptes-javascript-client/tree/master) (2022-11-03)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.2...master)
+
+**Closed issues:**
+
+- First party auth doesn't return login errors [\#177](https://github.com/zooniverse/panoptes-javascript-client/issues/177)
+
+**Merged pull requests:**
+- lib/auth: Return login errors
+[\#178](https://github.com/zooniverse/panoptes-javascript-client/pull/178)
+
 ## [v4.2.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.2) (2022-11-03)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.1...v4.2.2)
