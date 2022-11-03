@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/zooniverse/panoptes-javascript-client/tree/master) (2022-11-03)
+## [v4.2.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.3) (2022-11-03)
 
-[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.2...master)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.2...v4.2.3)
 
 **Closed issues:**
 
