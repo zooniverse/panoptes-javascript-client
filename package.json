@@ -5,6 +5,7 @@
   "main": "./lib/api-client.js",
   "author": "Zooniverse",
   "license": "Apache-2.0",
+  "repository": "zooniverse/panoptes-javascript-client",
   "dependencies": {
     "json-api-client": "~6.0.0",
     "local-storage": "^2.0.0",
