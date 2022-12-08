@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "repository": "zooniverse/panoptes-javascript-client",
   "dependencies": {
-    "json-api-client": "~6.0.0",
+    "json-api-client": "^6.0.6",
     "local-storage": "^2.0.0",
     "sugar-client": "^2.0.0"
   },
