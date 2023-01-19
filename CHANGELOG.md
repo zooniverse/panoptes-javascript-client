@@ -1,5 +1,13 @@
 # Changelog
 
+## [v4.2.8](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.8) (2023-01-19)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.7...v4.2.8)
+
+**Merged pull requests:**
+- Bump json-api-client from 6.0.6 to 6.0.7
+[\#184](https://github.com/zooniverse/panoptes-javascript-client/pull/184)
+
 ## [v4.2.7](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.7) (2022-12-08)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.6...v4.2.7)
