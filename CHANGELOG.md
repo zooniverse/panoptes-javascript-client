@@ -1,8 +1,15 @@
 # Changelog
 
+## [v5.0.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.0.1) (2023-01-23)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.0.0...v5.0.1)
+
+* Bump json-api-client from 7.0.0 to 7.0.1 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/188
+
+
 ## [v5.0.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.0.0) (2023-01-20)
 
-[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.7...v4.2.8)
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.8...v5.0.0)
 
 `json-api-client` now uses ES6 classes.
 
