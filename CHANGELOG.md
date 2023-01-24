@@ -1,5 +1,13 @@
 # Changelog
 
+## [v5.1.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.1.0) (2023-01-24)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.0.2...v5.1.0)
+
+Upgrade the Sugar client to Primus 8.
+
+* Upgrade Sugar to Primus 8 by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/185
+
 ## [v5.0.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.0.2) (2023-01-24)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.0.1...v5.0.2)
