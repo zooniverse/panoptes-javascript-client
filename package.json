@@ -8,8 +8,7 @@
   "repository": "zooniverse/panoptes-javascript-client",
   "dependencies": {
     "json-api-client": "^7.0.2",
-    "local-storage": "^2.0.0",
-    "sugar-client": "^2.0.0"
+    "local-storage": "^2.0.0"
   },
   "devDependencies": {
     "blue-tape": "~1.0.0",
