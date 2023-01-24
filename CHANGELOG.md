@@ -1,5 +1,13 @@
 # Changelog
 
+## [v5.0.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.0.2) (2023-01-24)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.0.1...v5.0.2)
+
+Fixes a bug where resource API methods are undefined after calling `client.type().get()`.
+
+* Bump json-api-client from 7.0.1 to 7.0.2 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/189
+
 ## [v5.0.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.0.1) (2023-01-23)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.0.0...v5.0.1)
