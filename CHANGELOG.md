@@ -1,5 +1,14 @@
 # Changelog
 
+## [v5.2.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.0) (2023-01-26)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.1.0...v5.2.0)
+
+Add the JSON-API client code to this repo.
+
+* Add json-api-client to this repo by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/186
+* Bump superagent from 8.0.8 to 8.0.9 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/190
+
 ## [v5.1.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.1.0) (2023-01-24)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.0.2...v5.1.0)
