@@ -22,36 +22,36 @@ const client = new JSONAPIClient(PATH_TO_API_ROOT, DEFAULT_HEADERS)
 ## Working with resources
 
 ```js
-# Create a resource
+// Create a resource
 const brian = client.type('people').create({ name: 'Brian' })
 
-# Change a resource (locally)
+// Change a resource (locally)
 brian.update({ name: 'Brian C.' })
 
-# Save a resource to the server
+// Save a resource to the server
 brian.save()
 
-# Delete a resource from the server
+// Delete a resource from the server
 brian.delete()
 ```
 
 ### Retrieving existing resources
 
 ```js
-# Retrieve a resource by ID
+// Retrieve a resource by ID
 client.type('people').get('1').then( person => { console.log(person) })
 
-# Retrieve several resources by ID
+// Retrieve several resources by ID
 client.type('people').get(['1', '2', '3']).then(people => { console.log(...people) })
 
-# Retrieve a resource by ID, skipping local cache
-# (Any request with query params is passed to the server.)
+// Retrieve a resource by ID, skipping local cache
+// (Any request with query params is passed to the server.)
 client.type('people').get('1', {})).then(person => { console.log(person) })
 
-# Retrieve a resource by query (likewise, this is never cached)
+// Retrieve a resource by query (likewise, this is never cached)
 client.type('people').get({ name: 'Brian' }).then(people => { const [brian] = people })
 
-# Chaining promised resource methods (experimental)
+// Chaining promised resource methods (experimental)
 client.type('people')
   .get({ name: 'Brian' })
   .index(0)
@@ -77,30 +77,30 @@ client.type('people').get('1').then(person => {
 ### Working with links
 
 ```js
-# Get a link (from local cache if, possible)
+// Get a link (from local cache if, possible)
 client.type('people').get('1')
   .then(person => person.get('pets'))
   .then (personsPets => {
     console.log(personsPets)
   })
 
-# Or (experimental)
+// Or (experimental)
 client.type('people').get('1').get('pets').then(personsPets => { console.log(personsPets)})
 
-# Skip the local cache (again, with query params)
+// Skip the local cache (again, with query params)
 person.get('pets', {}).then(personsPets => { console.log(personsPets) })
 
-# Set a link manually
+// Set a link manually
 client.type('animals').create(name: 'Spot').save().then(spot => {
   client.type('people').get('1').then(person => {
     person.update('links.pets': [spot.id]).save()
   })
 })
 
-# Add an item to a link (instead of replacing the whole thing)
+// Add an item to a link (instead of replacing the whole thing)
 client.type('people').get('1').addLink('pets', [rex.id, rover.id])
 
-# Remove an item from a link
+// Remove an item from a link
 client.type('people').get('1').removeLink('pets', spot.id)
 ```
 
