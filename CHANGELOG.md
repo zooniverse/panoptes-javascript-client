@@ -6,7 +6,7 @@
 * Add Resource methods to ResourcePromise by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/195
 
 
-**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.2.0...v5.2.1
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.2.0...master
 ## [v5.2.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.0) (2023-01-26)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.1.0...v5.2.0)
