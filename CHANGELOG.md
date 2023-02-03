@@ -1,6 +1,9 @@
 # Changelog
 
-## Unreleased 
+## [v5.2.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.1) (2023-02-03)
+
+Improved chainable ResourcePromise interface for API resources.
+
 * Add SugarClient tests by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/192
 * Simplify chainable Resource.Promise promises by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/193
 * Add Resource methods to ResourcePromise by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/195
