@@ -1,5 +1,124 @@
 # Changelog
 
+## [v5.2.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.1) (2023-02-03)
+
+Improved chainable ResourcePromise interface for API resources.
+
+* Add SugarClient tests by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/192
+* Simplify chainable Resource.Promise promises by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/193
+* Add Resource methods to ResourcePromise by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/195
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.2.0...master
+## [v5.2.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.0) (2023-01-26)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.1.0...v5.2.0)
+
+Add the JSON-API client code to this repo.
+
+* Add json-api-client to this repo by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/186
+* Bump superagent from 8.0.8 to 8.0.9 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/190
+
+## [v5.1.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.1.0) (2023-01-24)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.0.2...v5.1.0)
+
+Upgrade the Sugar client to Primus 8.
+
+* Upgrade Sugar to Primus 8 by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/185
+
+## [v5.0.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.0.2) (2023-01-24)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.0.1...v5.0.2)
+
+Fixes a bug where resource API methods are undefined after calling `client.type().get()`.
+
+* Bump json-api-client from 7.0.1 to 7.0.2 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/189
+
+## [v5.0.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.0.1) (2023-01-23)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.0.0...v5.0.1)
+
+* Bump json-api-client from 7.0.0 to 7.0.1 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/188
+
+
+## [v5.0.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.0.0) (2023-01-20)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.8...v5.0.0)
+
+`json-api-client` now uses ES6 classes.
+
+**Merged pull requests:**
+- Bump json-api-client from 6.0.7 to 7.0.0
+[\#187](https://github.com/zooniverse/panoptes-javascript-client/pull/187)
+
+## [v4.2.8](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.8) (2023-01-19)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.7...v4.2.8)
+
+**Merged pull requests:**
+- Bump json-api-client from 6.0.6 to 6.0.7
+[\#184](https://github.com/zooniverse/panoptes-javascript-client/pull/184)
+
+## [v4.2.7](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.7) (2022-12-08)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.6...v4.2.7)
+
+**Merged pull requests:**
+- Bump json-api-client from 6.0.5 to 6.0.6
+[\#183](https://github.com/zooniverse/panoptes-javascript-client/pull/183)
+
+## [v4.2.6](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.6) (2022-12-06)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.5...v4.2.6)
+
+**Merged pull requests:**
+- Bump json-api-client from 6.0.4 to 6.0.5
+[\#182](https://github.com/zooniverse/panoptes-javascript-client/pull/182)
+
+## [v4.2.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.5) (2022-11-26)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.4...v4.2.5)
+
+**Merged pull requests:**
+- Bump json-api-client from 6.0.3 to 6.0.4
+[\#180](https://github.com/zooniverse/panoptes-javascript-client/pull/180)
+
+## [v4.2.4](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.4) (2022-11-15)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.3...v4.2.4)
+
+## [v4.2.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.3) (2022-11-03)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.2...v4.2.3)
+
+**Closed issues:**
+
+- First party auth doesn't return login errors [\#177](https://github.com/zooniverse/panoptes-javascript-client/issues/177)
+
+**Merged pull requests:**
+- lib/auth: Return login errors
+[\#178](https://github.com/zooniverse/panoptes-javascript-client/pull/178)
+
+## [v4.2.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.2) (2022-11-03)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.1...v4.2.2)
+
+**Merged pull requests:**
+- Convert error responses to Error objects
+[\#175](https://github.com/zooniverse/panoptes-javascript-client/pull/175)
+
+## [v4.2.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.1) (2022-10-25)
+
+[Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.2.0...v4.2.1)
+
+**Security:**
+- Bump minimatch to 3.1.2.
+
+**Merged pull requests:**
+- Bump json-api-client from 6.0.2 to 6.0.3
+[\#173](https://github.com/zooniverse/panoptes-javascript-client/pull/173)
+
 ## [v4.2.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v4.2.0) (2022-10-12)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v4.1.1...v4.2.0)
