@@ -1,5 +1,24 @@
 # Changelog
 
+## [v5.2.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.3) (2023-02-22)
+
+Fixes a bug where changing or resetting your password fails unless the client and API are on the same origin.
+
+* Use credentialed requests for password updates by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/200
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.2.2...v5.2.3
+
+## [v5.2.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.2) (2023-02-20)
+
+Fixes `auth.signOut()` sending the wrong headers to the Panoptes API.
+
+* Test with Node 18 by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/196
+* Add default JSON headers to sign-out requests by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/198
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.2.1...v5.2.2
+
 ## [v5.2.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.1) (2023-02-03)
 
 Improved chainable ResourcePromise interface for API resources.
@@ -9,7 +28,7 @@ Improved chainable ResourcePromise interface for API resources.
 * Add Resource methods to ResourcePromise by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/195
 
 
-**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.2.0...master
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.2.0...v5.2.1
 ## [v5.2.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.0) (2023-01-26)
 
 [Full Changelog](https://github.com/zooniverse/panoptes-javascript-client/compare/v5.1.0...v5.2.0)
