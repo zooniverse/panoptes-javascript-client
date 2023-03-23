@@ -1,5 +1,17 @@
 # Changelog
 
+## [v5.2.4](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.4) (2023-03-23)
+
+Use auth'ed requests, with a token, for sign out in both OAuth clients (`auth.js` and `oauth.js`.)
+
+* add bearer token on signout  by @yuenmichelle1 in https://github.com/zooniverse/panoptes-javascript-client/pull/201
+
+## New Contributors
+
+* @yuenmichelle1 made their first contribution in https://github.com/zooniverse/panoptes-javascript-client/pull/201
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.2.3...v5.2.4
+
 ## [v5.2.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.3) (2023-02-22)
 
 Fixes a bug where changing or resetting your password fails unless the client and API are on the same origin.
