@@ -1,5 +1,11 @@
 # Changelog
 
+## [v5.2.6](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.6) (2023-05-21)
+* Refresh Sugar client tokens by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/203
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.2.5...v5.2.6
+
 ## [v5.2.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.5) (2023-03-29)
 
 Refactor sign out to remove delays when the Panoptes response is slow.
