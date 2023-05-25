@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.2.7](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.7) (2023-05-25)
+
+* Sugar client: add token refresh by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/204
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.2.6...v5.2.7
+
 ## [v5.2.6](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.2.6) (2023-05-21)
 * Refresh Sugar client tokens by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/203
 
