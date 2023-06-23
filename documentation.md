@@ -86,7 +86,7 @@ An Type basically represents an API endpoint. Type objects are usually chained t
 
 Creates a new Type object of a given type.
 
-``` javascript
+```js
 var subjectType = apiClient.type('subjects');
 ```
 
@@ -254,6 +254,100 @@ __Arguments__
 
 - function _(function)_ - the function to be unbound
 
+## Auth
+
+The Auth module authenticates a user using the OAuth password grant flow. Use it to authenticate on any `*.zooniverse.org` domain.
+
+### auth.checkCurrent()
+
+Obtains an access token and refresh token, then resolves to the current Panoptes user. Run this once, on page load, in order to initialise `auth` state.
+
+```js
+const user = await auth.checkCurrent();
+```
+
+__Returns__
+
+- Promise _(user)_ - resolves to the user object.
+
+### auth.checkBearerToken()
+
+Exchange the stored refresh token for an access token. `auth.checkCurrent()` must have resolved before this will work. Use this any time that you need a token in order to perform a credentialled request.
+
+eg.
+
+- POST an auth'ed classification.
+- request a personalised subject queue.
+- edit collections or favourites.
+- view recent classifications.
+
+```js
+const user = await auth.checkCurrent();
+const token = await auth.checkBearerToken();
+```
+
+__Returns__
+
+- Promise _(string)_ - resolves to an access token, encoded as a base64 string.
+
+### auth.signIn({ login, password })
+
+Sign in to Zooniverse with your login and password. Implicitly obtains an access token and refresh token.
+
+```js
+const user = await auth.signIn({
+  login: 'testUser',
+  password: 'mySecretPassword'
+});
+```
+
+__Arguments__
+
+- credentials _(object)_ - Login credentials for the current user.
+
+__Returns__
+
+- Promise _(user)_ - resolves to the user object.
+
+### auth.signOut()
+
+Clear the stored user session and sign out.
+
+### auth.changePassword({ current, replacement })
+
+Change your Zooniverse password and invalidate your old access and refresh tokens.
+
+```js
+const user = await auth.changePassword({
+  current: 'mySecretPassword',
+  replacement: 'myNewSecretPassword'
+});
+```
+
+__Arguments__
+
+- Object _(object)_ - An object containing the `current` and `replacement` password.
+
+__Returns__
+
+- Promise _(user)_ - resolves to the user object.
+
+### auth.resetPassword()
+
+TBD
+
+### auth.requestPasswordReset()
+
+TBD
+
+### auth.disableAccount()
+
+TBD
+
+### auth.unsubscribeEmail()
+
+TBD
+
 ## OAuth
 
 The OAuth module lets you use authenticate a user using the OAuth implicit grant method. Tokens are refreshed before they expire (currently at 2 hours).
@@ -262,7 +356,7 @@ The OAuth module lets you use authenticate a user using the OAuth implicit grant
 
 Attempts to pick up an existing session, after which it checks for token details in the URL. This should be run before the start of your app, and the app init function chained to it. A React app might look like this:
 
-```
+```js
 oauth.init(APP_ID)
   .then(function () {
     ReactDOM.render(
