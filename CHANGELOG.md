@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.5.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.0) (2023-07-03)
+
+* Auth: defer change events by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/212
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.4.1...v5.5.0
+
 ## [v5.4.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.4.1) (2023-07-03)
 
 * Auth module: explicitly emit 'change' events by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/211
