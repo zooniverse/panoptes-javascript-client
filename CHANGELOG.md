@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.4.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.4.1) (2023-07-03)
+
+* Auth module: explicitly emit 'change' events by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/211
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.4.0...v5.4.1
+
 ## [v5.4.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.4.0) (2023-07-03)
 
 * Bump semver from 7.3.8 to 7.5.3 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/209
