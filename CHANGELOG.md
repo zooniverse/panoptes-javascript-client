@@ -1,5 +1,13 @@
 # Changelog
 
+## [v5.4.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.4.0) (2023-07-03)
+
+* Bump semver from 7.3.8 to 7.5.3 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/209
+* Refactor auth with async/await by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/210
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.3.0...v6.0.0
+
 ## [v5.3.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.3.0) (2023-05-26)
 
 * Improved Sugar client token refresh flow by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/205
