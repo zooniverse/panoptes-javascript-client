@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.5.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.1) (2023-07-03)
+
+* Bugfix: Auth token refresh flow by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/213
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.5.0...v5.5.1
+
 ## [v5.5.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.0) (2023-07-03)
 
 * Auth: defer change events by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/212
