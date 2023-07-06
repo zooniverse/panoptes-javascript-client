@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.5.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.3) (2023-07-06)
+
+* Bugfix: defer 'change' events on sign out by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/215
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.5.2...v5.5.3
+
 ## [v5.5.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.2) (2023-07-04)
 
 * Refresh token fixes by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/214
