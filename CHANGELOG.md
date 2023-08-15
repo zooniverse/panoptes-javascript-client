@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.5.4](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.4) (2023-08-15)
+
+* Bump superagent from 8.0.9 to 8.1.0 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/216
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.5.3...v5.5.4
+
 ## [v5.5.3](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.3) (2023-07-06)
 
 * Bugfix: defer 'change' events on sign out by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/215
