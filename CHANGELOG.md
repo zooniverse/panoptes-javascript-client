@@ -1,5 +1,9 @@
 # Changelog
 
+## [v5.5.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.5) (2023-08-24)
+
+* Bump superagent from 8.1.0 to 8.1.2 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/217
+
 ## [v5.5.4](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.4) (2023-08-15)
 
 * Bump superagent from 8.0.9 to 8.1.0 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/216
