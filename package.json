@@ -1,6 +1,6 @@
 {
   "name": "panoptes-client",
-  "version": "5.5.4",
+  "version": "5.5.5",
   "description": "A Javascript client to access the Panoptes API",
   "main": "./lib/api-client.js",
   "author": "Zooniverse",
