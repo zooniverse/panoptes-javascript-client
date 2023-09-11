@@ -1,5 +1,14 @@
 # Changelog
 
+## [v5.5.6](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.6) (2023-09-11)
+Fixes a bug where `apiClient.get(url)` actually sends a DELETE request for `url`.
+
+* Bump chai from 4.3.7 to 4.3.8 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/218
+* Remove dynamically assigned request methods by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/219
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.5.5...v5.5.6
+
 ## [v5.5.5](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.5) (2023-08-24)
 
 * Bump superagent from 8.1.0 to 8.1.2 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/217
