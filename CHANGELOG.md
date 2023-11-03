@@ -1,5 +1,16 @@
 # Changelog
 
+## [v5.5.7](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.7) (2023-11-03)
+Bump the Primus client to 8.0.8 and remove workarounds for bugs in Firefox 22 and Safari 5.
+
+* Bump chai from 4.3.8 to 4.3.9 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/220
+* Bump chai from 4.3.9 to 4.3.10 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/221
+* Bump chai-spies from 1.0.0 to 1.1.0 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/222
+* SugarClient: Update Primus by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/223
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.5.6...v5.5.7
+
 ## [v5.5.6](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.6) (2023-09-11)
 Fixes a bug where `apiClient.get(url)` actually sends a DELETE request for `url`.
 
