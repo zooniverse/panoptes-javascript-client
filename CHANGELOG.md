@@ -1,5 +1,15 @@
 # Changelog
 
+## [v5.5.8](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.8) (2023-11-06)
+Dependency updates.
+
+* Bump actions/checkout from 3 to 4 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/224
+* Bump actions/setup-node from 3 to 4 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/225
+* SugarClient: Bump Primus to 8.0.9 by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/226
+
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.5.7...v5.5.8
+
 ## [v5.5.7](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.7) (2023-11-03)
 Bump the Primus client to 8.0.8 and remove workarounds for bugs in Firefox 22 and Safari 5.
 
