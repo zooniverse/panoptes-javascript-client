@@ -50,7 +50,8 @@ Tests (via [tap](https://github.com/tapjs/node-tap)) exist for the `auth` module
 2. `npm version major|minor|patch`.
 3. `git push && git push --tags`.
 4. Publish a new tagged release on GitHub.
-5. `npm publish`.
+5. `npm publsih --dry-run` to double-check the release.
+6. `npm publish`.
 
 ### License
 
