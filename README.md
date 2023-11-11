@@ -44,6 +44,14 @@ This project adheres to [Semantic Versioning](http://semver.org/), and follows t
 
 Tests (via [tap](https://github.com/tapjs/node-tap)) exist for the `auth` module, and can be run with `npm run test`.
 
+## Publishing
+
+1. Add the new version to the changelog.
+2. `npm version major|minor|patch`.
+3. `git push && git push --tags`.
+4. Publish a new tagged release on GitHub.
+5. `npm publish`.
+
 ### License
 
 Copyright 2015 Zooniverse
