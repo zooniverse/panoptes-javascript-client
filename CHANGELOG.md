@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.6.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.6.0) (2023-11-29)
+
+* Add eras-client (erasClient) for classifications and comments statistics from [ERAS service](https://github.com/zooniverse/eras) by @yuenmichelle1 in https://github.com/zooniverse/panoptes-javascript-client/pull/227
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.5.8...v5.6.0
+
+
 ## [v5.5.8](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.5.8) (2023-11-06)
 Dependency updates.
 
