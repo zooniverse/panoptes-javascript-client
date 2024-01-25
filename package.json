@@ -12,13 +12,11 @@
     "superagent": "^8.0.8"
   },
   "devDependencies": {
-    "blue-tape": "~1.0.0",
     "chai": "^4.3.7",
     "chai-spies": "^1.0.0",
-    "mocha": "^10.2.0",
-    "tap-spec": "^5.0.0"
+    "mocha": "^10.2.0"
   },
   "scripts": {
-    "test": "mocha && node ./tape-test/index.js | tap-spec"
+    "test": "mocha"
   }
 }
