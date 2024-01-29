@@ -4,13 +4,13 @@
  * DS203: Remove `|| {}` from converted for-own loops
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-const chai = require('chai');
-chai.use(require('chai-spies'));
-const {
-  expect
-} = chai;
-const SugarClient = require('../lib/SugarClient/client');
-const MockPrimus = require('./support/mock_primus');
+import { expect, use } from 'chai';
+import chaiSpies from 'chai-spies';
+
+import SugarClient from '../lib/SugarClient/client.js';
+import MockPrimus from './support/mock_primus.js';
+
+const { spy } = use(chaiSpies);
 
 SugarClient.host = 'sugar-api';
 
@@ -19,8 +19,8 @@ describe('SugarClient', function() {
   let userClient = (sessionClient = (callback1 = (callback2 = null)));
 
   const setupEvents = function() {
-    callback1 = chai.spy();
-    callback2 = chai.spy();
+    callback1 = spy();
+    callback2 = spy();
     return userClient.events = {
       event1: [callback1, callback2],
       event2: [callback2]
@@ -33,7 +33,7 @@ describe('SugarClient', function() {
     SugarClient.Primus = MockPrimus;
     for (let key of Object.keys(MockPrimus || {})) {
       const _ = MockPrimus[key];
-      MockPrimus[key] = chai.spy(MockPrimus[key]);
+      MockPrimus[key] = spy(MockPrimus[key]);
     }
 
     userClient = new SugarClient('user', 'auth');
@@ -76,7 +76,7 @@ describe('SugarClient', function() {
 
   describe('#connect', function() {
     it('should disconnect', function() {
-      sessionClient.disconnect = chai.spy();
+      sessionClient.disconnect = spy();
       sessionClient.connect();
       return expect(sessionClient.disconnect).to.have.been.called();
     });
@@ -116,14 +116,14 @@ describe('SugarClient', function() {
 
   describe('#receiveData', function() {
     describe('with data', () => it('should emit', function() {
-      userClient.emit = chai.spy();
+      userClient.emit = spy();
       userClient.receiveData({foo: 'bar'});
       return expect(userClient.emit).to.have.been.called.with({foo: 'bar'});
     }));
 
     return describe('with a connection', function() {
       beforeEach(function() {
-        userClient.__subscribeToChannels = chai.spy();
+        userClient.__subscribeToChannels = spy();
         return userClient.receiveData({
           type: 'connection',
           loggedIn: 'state',
@@ -146,7 +146,7 @@ describe('SugarClient', function() {
   });
 
   describe('#subscribeTo', function() {
-    beforeEach(() => userClient.__subscribeTo = chai.spy());
+    beforeEach(() => userClient.__subscribeTo = spy());
 
     it('should disallow duplicates', function() {
       userClient.subscribeTo('foo');
@@ -241,7 +241,7 @@ describe('SugarClient', function() {
   describe('#__subscribeToChannels', function() {
     beforeEach(function() {
       userClient.subscriptions = { foo: true, bar: true };
-      userClient.__subscribeTo = chai.spy();
+      userClient.__subscribeTo = spy();
       return userClient.__subscribeToChannels();
     });
 
