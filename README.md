@@ -46,12 +46,15 @@ Tests (via [tap](https://github.com/tapjs/node-tap)) exist for the `auth` module
 
 ## Publishing
 
-1. Add the new version to the changelog.
-2. `npm version major|minor|patch`.
-3. `git push && git push --tags`.
-4. Publish a new tagged release on GitHub.
-5. `npm publish --dry-run` to double-check the release.
-6. `npm publish`.
+1. Create a new branch for the new version.
+2. Add the new version to the changelog with summary of changes.
+3. Update package.json and package-lock.json with the new version number (manually or with `npm --no-git-tag-version version [major|minor|patch]`).
+4. Commit and push the changes to GitHub. Create a pull request, have it reviewed, and merge it.
+5. Using GitHub's web interface, create a new tag and release with the new version number and summary of changes.
+6. Pull the new version of the package locally, confirm it reflects the new version.
+7. Run tests with `npm test`, confirm that they pass.
+8. Run `npm publish --dry-run` to check that the package is ready to publish, confirm no errors or issues.
+9. Run `npm publish` to publish the new version to npm.
 
 ### License
 
