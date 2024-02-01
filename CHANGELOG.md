@@ -1,5 +1,15 @@
 # Changelog
 
+## [v5.6.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.6.1) (2024-02-01)
+Dependency update and tests refactors.
+
+* Bump chai from 4.3.10 to 5.0.3 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/231
+* Convert Mocha tests to ESM by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/232
+* Remove tap tests by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/233
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.6.0...v5.6.1
+
+
 ## [v5.6.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.6.0) (2023-11-29)
 
 * Add eras-client (erasClient) for classifications and comments statistics from [ERAS service](https://github.com/zooniverse/eras) by @yuenmichelle1 in https://github.com/zooniverse/panoptes-javascript-client/pull/227
