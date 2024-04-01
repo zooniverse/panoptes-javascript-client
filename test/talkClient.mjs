@@ -6,7 +6,7 @@ import { talkSearch, talkSearchWithNull } from './support/mockTalkAPI.mjs';
 describe('talkClient', function () {
   describe('search', function () {
     specify('should return a list of comments', async function () {
-      nock('https://talk.zooniverse.org')
+      nock('https://talk-test.zooniverse.org')
         .get('/searches?http_cache=true&types=comments&section=zooniverse&page=1&pageSize=10&query=depression')
         .reply(200, talkSearch);
 
@@ -27,7 +27,7 @@ describe('talkClient', function () {
     });
     specify('should ignore null comments', async function () {
       // this Talk query returns 9 comments and one null comment.
-      nock('https://talk.zooniverse.org')
+      nock('https://talk-test.zooniverse.org')
         .get('/searches?http_cache=true&types=comments&section=zooniverse&page=3&pageSize=10&query=depression')
         .reply(200, talkSearchWithNull);
 
