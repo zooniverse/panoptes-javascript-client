@@ -46,5 +46,24 @@ describe('talkClient', function () {
         expect(result.body).to.be.a('string');
       });
     });
+    specify('should be empty when all results are null', async function () {
+      // This is a production Talk query that only returns null results.
+      nock('https://talk-test.zooniverse.org')
+        .get('/searches?http_cache=true&types=comments&section=zooniverse&page=4&pageSize=10&query=depression')
+        .reply(200, {
+          searches: [null, null, null, null, null, null, null, null, null, null]
+        });
+
+      const params = {
+        types: ['comments'],
+        section: 'zooniverse',
+        page: 4,
+        pageSize: 10,
+        query: 'depression'
+      };
+      const results = await talkClient.type('searches').get(params);
+      expect(results).to.be.an('array');
+      expect(results).to.have.lengthOf(0);
+    });
   });
 });
