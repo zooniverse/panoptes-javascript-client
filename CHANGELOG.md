@@ -1,5 +1,14 @@
 # Changelog
 
+## [v5.6.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.6.2) (2024-04-08)
+Dependency updates and bug fixes.
+
+* Bump github/codeql-action from 2 to 3 by @dependabot in https://github.com/zooniverse/panoptes-javascript-client/pull/229
+* Update README publishing instructions by @mcbouslog in https://github.com/zooniverse/panoptes-javascript-client/pull/235
+* Fix to ignore null items in API responses by @eatyourgreens in https://github.com/zooniverse/panoptes-javascript-client/pull/240
+
+**Full Changelog**: https://github.com/zooniverse/panoptes-javascript-client/compare/v5.6.1...v5.6.2
+
 ## [v5.6.1](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.6.1) (2024-02-01)
 Dependency update and tests refactors.
 
