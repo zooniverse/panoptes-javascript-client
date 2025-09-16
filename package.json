@@ -6,6 +6,7 @@
   "author": "Zooniverse",
   "license": "Apache-2.0",
   "repository": "zooniverse/panoptes-javascript-client",
+  "type": "commonjs",
   "dependencies": {
     "local-storage": "^2.0.0",
     "normalizeurl": "~1.0.0",
