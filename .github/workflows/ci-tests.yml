@@ -18,3 +18,5 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run test
+    - name: Sugar docs are in sync with the source
+      run: npm run docs:check
