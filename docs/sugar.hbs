@@ -1,0 +1,146 @@
+# Sugar
+
+[Sugar](https://github.com/zooniverse/sugar) is the Zooniverse notification
+service. It pushes server-sent events to the browser over a websocket, falling
+back to long polling. Talk notifications, project announcements and intervention
+experiments all arrive this way.
+
+> This page is generated from the JSDoc in `lib/SugarClient/client.js` by
+> `npm run docs`. Do not edit it by hand: `npm run docs:check` fails in CI when
+> it is out of sync. Every example below is executed against a real Sugar server
+> by `test/sugarExamples.mjs`, and every frame shape is asserted by
+> `test/sugarProtocol.mjs`.
+
+## Quick start
+
+```js
+import { sugarClient } from 'panoptes-client/lib/sugar'
+
+sugarClient.subscribeTo(`project-${project.id}`)
+sugarClient.on('announcement', function (frame) {
+  console.log(frame.data.message)
+})
+```
+
+`lib/sugar.js` exports a ready-made `sugarClient`, already pointed at the right
+host for your environment and already listening to Panoptes auth. Import that
+rather than constructing your own.
+
+It only exports in a browser. `typeof navigator === 'undefined'` makes the whole
+module evaluate to `undefined`, so server-rendered code has to import it
+dynamically. Where top-level `await` is not available, an immediately invoked
+async function does the job:
+
+```js
+const isBrowser = typeof window !== 'undefined'
+let sugarClient
+
+;(async function initSugarClient() {
+  if (isBrowser) {
+    const sugar = await import('panoptes-client/lib/sugar')
+    sugarClient = sugar.sugarClient
+  }
+})()
+```
+
+**That import resolves on a later tick, so guard every use.** Code that runs
+soon after module evaluation can reach `sugarClient` while it is still
+`undefined`:
+
+```js
+if (sugarClient) {
+  sugarClient.subscribeTo(channel)
+}
+```
+
+## Connection lifecycle
+
+The socket is created with Primus's `manual: true`, so **nothing connects when
+you import the module**. The only path to an open socket is:
+
+```
+auth 'change' or 'refresh'  ->  sugarClient.refreshToken(token)  ->  connect()
+```
+
+`refreshToken` connects only when the client has a `userId` and the token has
+actually changed. Two consequences worth knowing:
+
+- A logged-out visitor never opens a socket through `lib/sugar.js`. The server
+  supports anonymous `session:` connections, but nothing in this client reaches
+  them.
+- You can subscribe before the socket is open. Pending subscriptions are re-sent
+  100ms after the server acknowledges the connection.
+
+## Channels
+
+Two shapes, and the punctuation is not decorative:
+
+| Channel | Example | Who may subscribe |
+| --- | --- | --- |
+| `user:<id>` | `user:1755` | only the connection authenticated as that user |
+| `session:<sparkId>` | `session:X9b20cAX...` | only the connection it was issued to |
+| `zooniverse` | `zooniverse` | anyone |
+| `project-<id>` | `project-1755` | anyone |
+
+Private channels use a colon. Public ones are plain or hyphenated. `project-1755`
+is correct; `project:1755` is not a project channel at all.
+
+**Subscribing to a channel you are not allowed to join is a silent no-op.** The
+server sends no response frame and no error, and `subscribeTo` still returns
+`true` and still records the channel locally. There is no way for the client to
+detect the rejection. Do not treat the return value as authorization.
+
+## Frames
+
+Everything the server sends is a JSON object with a `type`. `on(type, handler)`
+dispatches on it.
+
+| `type` | Meaning |
+| --- | --- |
+| `connection` | sent once per socket; handled by the client, not dispatched |
+| `response` | acknowledges a `Subscribe`, `Unsubscribe` or `Event` you sent |
+| `notification` | a Talk notification published to your user channel |
+| `announcement` | published to a public section channel |
+| `experiment` | an intervention published to your user channel |
+
+Published frames repeat the message type: once at the top level, and again
+inside `data`. Listen on the top-level `type`, read the payload from `data`.
+
+**Listeners and subscriptions are separate.** `unsubscribeFrom` stops the
+messages arriving but leaves the listener registered; only `off` removes it. A
+routine that subscribes and registers a listener together, then later only
+unsubscribes, adds a second listener the next time it runs and handles every
+message twice. Tear both down:
+
+```js
+sugarClient.unsubscribeFrom(channel)
+sugarClient.off('notification', handler)
+```
+
+## HTTP API
+
+The Sugar server also answers HTTP. `lib/sugar.js` exports `sugarApiClient`, a
+`JSONAPIClient` pointed at the same host, for the read endpoints.
+
+| Method | Path | Auth | Answers |
+| --- | --- | --- | --- |
+| GET | `/presence` | none | `[{ channel, count }]` for every channel with subscribers |
+| GET | `/active_users?channel=<channel>` | none | `{ users: [{ id }] }` |
+| POST | `/notify` | basic | echoes the messages with `type: "notification"` |
+| POST | `/announce` | basic | echoes the messages with `type: "announcement"` |
+| POST | `/experiment` | basic | echoes the messages with `type: "experiment"` |
+
+Two things to watch:
+
+- **`sugarApiClient.get('/active_users')` returns a bare array, not the
+  envelope.** `JSONAPIClient` unwraps the single top-level key, so you get
+  `[{ id }]` directly.
+- Presence excludes private channels, and only logged-in users are recorded, so
+  `/active_users` never lists anonymous visitors.
+
+The POST endpoints are for server-side publishers and are rate limited to 100
+requests per IP per 15 minutes.
+
+## Reference
+
+{{>main}}
