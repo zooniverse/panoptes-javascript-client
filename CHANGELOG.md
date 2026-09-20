@@ -1,5 +1,8 @@
 # Changelog
 
+## [v5.7.0](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.7.0) (2025-09-16)
+Designate the library as CJS.
+
 ## [v5.6.2](https://github.com/zooniverse/panoptes-javascript-client/tree/v5.6.2) (2024-04-08)
 Dependency updates and bug fixes.
 
